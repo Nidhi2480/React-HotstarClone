@@ -1,4 +1,10 @@
-.App {
+*{
+  margin:0;
+  padding:0;
+}
+
+
+/* .App {
   text-align: center;
   min-height: 100vh;
 }
@@ -36,4 +42,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
