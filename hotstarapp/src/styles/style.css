@@ -5,61 +5,66 @@
 
 /* Navbar styles */
 .nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Use fractions for flexible layout */
     position: fixed;
-    width:50%;
-    min-width: 10%; /* Set min-width to ensure it doesn't collapse */
+    width: 100%; /* Set min-width in pixels */
     left: 0;
     top: 0;
-    bottom: 0; /* Stretch the navbar to the bottom of the viewport */
-    background-color: rgba(7, 2, 32, 0.04);
+    bottom: 0;
+  
     color: aliceblue;
     transition: all 0.5s ease;
 }
 
 .nav-bar {
-     width:50%;
+   width:130px;
+   background-color: rgba(7, 2, 32, 0.04);
 }
 
 .nav-text {
-    margin-left: 50%;
-    margin-top: 10vh;
+    display: flex;
+    width:70%;
+    flex-direction: column;
+    justify-content: center;
+
     position: fixed;
     color: #ffffff;
-    margin-left:4%;
-    opacity: 1; /* Initially hide the nav text */
-    transition: opacity 0.3s ease;  /* Make the nav text block-level for proper spacing */
-    align-items: center; /* Align items vertically */
+    opacity: 1;
+    margin-top: 12%;
+    transition: opacity 0.3s ease;
+    margin-left:10%;
 }
 
-.nav-bar ul {
+.nav-bar ul,
+.nav-text ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
 }
 
-.nav-bar ul li {
-    margin-bottom: 40px;
+.nav-bar ul li .nav-link,
+.nav-text ul li {
+    margin-bottom: 35px; /* Reduce margin for closer spacing */
 }
 
-.nav-bar ul li img {
-    width: 3vh;
+.nav-bar ul li .nav-link img {
+    margin-left: 5vh;
+    width: 20px; /* Adjust image size as needed */
 }
 
-.nav-bar .logo {
-    margin-top: 2vh;
-    height: 12vh;
-    width: 130px;
+.nav-bar .logo { 
+    margin-left:3vh;
+    margin-top:5vh;
+    height: 6vh;
+    width: 8vh;
 }
 
 .nav-bar .nav-link {
-    margin-left: 5vh;
-    display: flex; /* Make the links block-level for proper spacing */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    transition: transform 0.3s ease; /* Transition for scaling */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
 }
 
 /* Scale the link on hover */
@@ -68,31 +73,20 @@
 }
 
 /* Show the nav text on hover */
-.nav-bar .nav-link:hover .nav-text {
-    opacity: 1;
+.nav-bar .nav-link:hover + .nav-text {
+    transform: scale(1.1);
 }
 
 /* Button styles */
 .nav-bar .button {
-    border: 1px solid rgba(255, 255, 0, 0.1); /* Yellow outline with transparency */
+    border: 1px solid rgba(235, 156, 9, 0.8);
     border-radius: 10px;
-    padding: 0 15px;
+    margin-left: 1vh;
+    margin-top: 2vh;
+    margin-bottom:38px;
+    padding: 5px 5px; /* Add padding for better button appearance */
     cursor: pointer;
     font-weight: bold;
-    margin-left: 0;
-    margin-top: 0;
-    margin-bottom: 40px;
-    background-color: rgba(201, 171, 37, 0.1); /* Transparent background */
-    color: rgba(255, 230, 0, 0.8); /* White text with transparency */
-}
-
-.nav-text ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-text ul li {
-    margin-bottom: 40px;
+    background-color: rgba(201, 171, 37, 0.2);
+    color: rgba(248, 186, 16, 0.9);
 }
