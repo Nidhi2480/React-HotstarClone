@@ -1,6 +1,20 @@
 .row-contents{
+    margin-left:16vh;
     margin-top: 1vh;
-    margin-left: 10%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border-radius: 10px;
+    display:flex;
+    justify-content:space-between;
+    height:50vh;
+    width:100vh;
+    
+}
+.row-movies{
+    margin-left:16vh;
+    color:white;
+}
+
+.row-movies .row-contents img{
+    margin-right: 2vh;
+
 }

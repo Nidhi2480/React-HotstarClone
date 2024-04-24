@@ -1,62 +1,36 @@
-/* Set background color for the entire view */
 .whole-view {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(34, 32, 32);
 }
-
-/* Navbar styles */
-.nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Use fractions for flexible layout */
+.nav-bar {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    width: 100%; /* Set min-width in pixels */
+    width: 15%;
     left: 0;
-    top: 0;
+    top: 15px;
     bottom: 0;
-  
     color: aliceblue;
     transition: all 0.5s ease;
+    min-height:150px;
+    z-index: 3;
+    overflow-x: hidden;
 }
-
-.nav-bar {
-   width:130px;
-   background-color: rgba(7, 2, 32, 0.04);
-}
-
-.nav-text {
-    display: flex;
-    width:70%;
-    flex-direction: column;
-    justify-content: center;
-
-    position: fixed;
-    color: #ffffff;
-    opacity: 1;
-    margin-top: 12%;
-    transition: opacity 0.3s ease;
-    margin-left:10%;
-}
-
-.nav-bar ul,
-.nav-text ul {
+.nav-bar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-
-.nav-bar ul li .nav-link,
-.nav-text ul li {
-    margin-bottom: 35px; /* Reduce margin for closer spacing */
+.nav-bar ul li .nav-link{
+    margin-bottom: 6vh;
+    margin-left: 6vh;
+    width:150px;    
 }
-
-.nav-bar ul li .nav-link img {
-    margin-left: 5vh;
-    width: 20px; /* Adjust image size as needed */
-}
-
 .nav-bar .logo { 
-    margin-left:3vh;
-    margin-top:5vh;
-    height: 6vh;
-    width: 8vh;
+    margin-top:3vh;
+    margin-left: 3.4vh;
+    height: 36px;
+    width: 51px;
 }
 
 .nav-bar .nav-link {
@@ -66,27 +40,45 @@
     color: inherit;
     transition: transform 0.3s ease;
 }
-
-/* Scale the link on hover */
-.nav-bar .nav-link:hover {
-    transform: scale(1.1);
+.nav-bar ul li img {
+    width:20px;
+    transition: transform 0.3s ease;
 }
-
-/* Show the nav text on hover */
-.nav-bar .nav-link:hover + .nav-text {
-    transform: scale(1.1);
+.nav-bar .nav-link.active img {
+    transform: scale(1.2) translateX(3px);
 }
-
-/* Button styles */
 .nav-bar .button {
-    border: 1px solid rgba(235, 156, 9, 0.8);
+    border: 1px solid rgba(235, 156, 9, 0.1);
     border-radius: 10px;
     margin-left: 1vh;
-    margin-top: 2vh;
-    margin-bottom:38px;
-    padding: 5px 5px; /* Add padding for better button appearance */
+    margin-top: 1vh;
+    margin-bottom: 8vh;
+    padding: 0.4vh 2vh;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 12.5px;
     background-color: rgba(201, 171, 37, 0.2);
-    color: rgba(248, 186, 16, 0.9);
+    color: rgb(255, 187, 0);
+}
+
+.nav-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-bar.expanded {
+    width: 60vw;
+    background: linear-gradient(to right,  rgba(0, 0, 0, 0.8), rgrgba(0, 0, 0, 0.5)rgba(0, 0, 0, 0)); /* Linear gradient from solid color to transparent */
+   
+}
+.nav-text {
+    display: inline-block; 
+    font-size: 16px; 
+    color: #ffffff; 
+    margin-left: 5vb; 
+    transition: transform 0.3s ease;
+}
+
+.nav-text.active {
+    display: inline-block;
+    transform: scale(1.2) translateX(5px); 
 }

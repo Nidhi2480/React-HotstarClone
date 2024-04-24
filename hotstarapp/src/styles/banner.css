@@ -1,0 +1,81 @@
+.banner {
+    position: relative; 
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.banner video {
+    width: 100%;
+    min-width:68vb;
+    position: fixed; 
+    z-index: 0; 
+}
+
+.banner .information {
+    position: absolute; 
+    top: 20vh;
+    left: 9%;
+    width: 90%;
+    min-width:60vb ;
+    background-color:rgb(0, 0, 0,0);
+    z-index: 2; 
+}
+.banner p{
+    margin-top: 2vh;
+    color:rgb(238, 233, 233);
+    margin-bottom: 2vh;
+}
+.banner .description p{
+    margin-top: 2vh;
+    color:rgb(238, 233, 233,.7);
+    margin-bottom: 2vh;
+}
+.banner .details{
+    font-weight: bold;
+}
+.banner .category{
+    font-weight: bold;
+}
+.banner button{
+    border: 1px solid rgba(190, 187, 182, 0.1);
+    border-radius: 4px;
+    margin-top: 1vh;
+    padding: 0.4vh 2vh;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(104, 101, 87, 0.6);
+    color: rgb(255, 254, 251);
+}
+.banner .row .buttons button{
+    border: 1px solid rgba(190, 187, 182, 0.1);
+    border-radius: 4px;
+    margin-top: 4vh;
+    margin-right: 2vb;
+    padding:3.6vh 8vb;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(104, 101, 87, 0.4);
+    color: rgb(255, 254, 251);
+}
+.banner .details,.category,.description,img{
+    width:70vb;
+}
+.banner .row{
+    display:flex;
+    justify-content: space-between;
+}
+
+.banner .row .image img{
+    margin-top: 4vh;
+    height:10vh;
+    width:20vb;
+}
+.banner .rows{
+    position:absolute;
+    margin-top:98vh;
+    z-index:2 ;
+    top:50%;
+    background-color: black;
+}

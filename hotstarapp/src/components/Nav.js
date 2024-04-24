@@ -9,71 +9,93 @@ import Logo from '../icons/logo-d-plus.svg';
 import tv from '../icons/tv.svg';
 import movies from '../icons/movies.svg';
 
-function Nav(){
-    const [isHovered, setIsHovered] = useState(false);
+// Import the necessary icons
 
-    return (
-      <div className="nav" >
-        <div className="nav-bar">
+function Nav(){
+  const [isHovered, setIsHovered] = useState(false);
+  const [activeNav, setActiveNav] = useState(null);
+  let timeoutId;
+
+  const handleHover = (navName) => {
+      clearTimeout(timeoutId);
+      setIsHovered(true);
+      setActiveNav(navName);
+  };
+
+  const handleLeave = () => {
+      timeoutId = setTimeout(() => {
+          setIsHovered(false);
+      }, 500); 
+  };
+
+  return (
+      <div className={`nav-bar ${isHovered ? 'expanded' : ''}`}>
           <ul>
-            <li>
-              <img className="logo" src={Logo} alt="logo" />
-            </li>
-            <li>
-              <button className="button">Subscribe</button>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={profileLogo} alt="profile" />
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={searchLogo} alt="Search" />
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={homeLogo} alt="Home" />
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={tv} alt="Sports" />
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={movies} alt="Sports" />
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={sportsLogo} alt="Sports" />
-              </a>
-            </li>
-            <li>
-              <a href="/#" className="nav-link" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                <img src={categoryLogo} alt="Categories" />
-              </a>
-            </li>
+              <li>
+                  <img className="logo" src={Logo} alt="logo" />
+              </li>
+              <li>
+                  <button className="button">Subscribe {">"}</button>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "profile" ? 'active' : ''}`} onMouseEnter={() => handleHover("profile")} onMouseLeave={handleLeave}>
+                      <img src={profileLogo} alt="profile" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "profile" ? 'active' : ''}`}>My Space</span>
+                      )}
+                  </a>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "search" ? 'active' : ''}`} onMouseEnter={() => handleHover("search")} onMouseLeave={handleLeave}>
+                      <img src={searchLogo} alt="Search" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "search" ? 'active' : ''}`}>Search</span>
+                      )}
+                  </a>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "home" ? 'active' : ''}`} onMouseEnter={() => handleHover("home")} onMouseLeave={handleLeave}>
+                      <img src={homeLogo} alt="Home" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "home" ? 'active' : ''}`}>Home</span>
+                      )}
+                  </a>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "tv" ? 'active' : ''}`} onMouseEnter={() => handleHover("tv")} onMouseLeave={handleLeave}>
+                      <img src={tv} alt="TV" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "tv" ? 'active' : ''}`}>TV</span>
+                      )}
+                  </a>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "movies" ? 'active' : ''}`} onMouseEnter={() => handleHover("movies")} onMouseLeave={handleLeave}>
+                      <img src={movies} alt="Movies" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "movies" ? 'active' : ''}`}>Movies</span>
+                      )}
+                  </a>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "sports" ? 'active' : ''}`} onMouseEnter={() => handleHover("sports")} onMouseLeave={handleLeave}>
+                      <img src={sportsLogo} alt="Sports" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "sports" ? 'active' : ''}`}>Sports</span>
+                      )}
+                  </a>
+              </li>
+              <li>
+                  <a href="/#" className={`nav-link ${activeNav === "category" ? 'active' : ''}`} onMouseEnter={() => handleHover("category")} onMouseLeave={handleLeave}>
+                      <img src={categoryLogo} alt="Categories" />
+                      {isHovered && (
+                          <span className={`nav-text ${activeNav === "category" ? 'active' : ''}`}>Categories</span>
+                      )}
+                  </a>
+              </li>
           </ul>
-        </div>
-        {isHovered && (
-          <div className="nav-text">
-          <ul>
-            <li>My Space</li>
-            <li>Search</li>
-            <li>Home</li>
-            <li>TV</li>
-            <li>Movies</li>
-            <li>Sports</li>
-            <li>Categories</li>
-          </ul>
-        </div>
-        )}
       </div>
-    );
+  );
 }
 
 export default Nav;
