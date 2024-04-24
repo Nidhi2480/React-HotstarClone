@@ -59,7 +59,7 @@
     background-color: rgba(104, 101, 87, 0.4);
     color: rgb(255, 254, 251);
 }
-.banner .details,.category,.description,img{
+.banner .details,.category,.description{
     width:70vb;
 }
 .banner .row{
@@ -72,6 +72,9 @@
     margin-left:1vh;
     height:10vh;
     width:20vb;
+}
+.banner .information .movieposter{
+    width:30vb;
 }
 .banner .shadow{
     position:absolute;

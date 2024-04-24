@@ -13,7 +13,7 @@ function Content(){
             Your browser does not support the video tag.
             </video></div>
             <div className="information">
-                <img src={movielogo} alt="movieposter" />
+                <img className="movieposter" src={movielogo} alt="movieposter" />
                 <div className="details">
                     <p>2019  * 2h 22m 4 * languages *<button>U/A 13+</button></p>
                 </div>
