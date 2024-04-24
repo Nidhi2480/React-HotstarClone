@@ -1,20 +1,33 @@
 .row-contents{
-    margin-left:16vh;
     margin-top: 1vh;
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
     display:flex;
     justify-content:space-between;
-    height:50vh;
-    width:100vh;
+    height:47vh;
+    width:100vb;
     
 }
 .row-movies{
     margin-left:16vh;
     color:white;
+    width:100%;
 }
 
 .row-movies .row-contents img{
     margin-right: 2vh;
-
+    width:25vb;
+    transition: transform .2s ease;
+}
+.row-movies .row-contents .mov1.active{
+    transform:scale(1.5)
+}
+.row-movies .row-contents .mov2.active{
+    transform:scale(1.5)
+}
+.row-movies .row-contents .mov3.active{
+    transform:scale(1.5)
+}
+.row-movies .row-contents .mov4.active{
+    transform:scale(1.5)
 }

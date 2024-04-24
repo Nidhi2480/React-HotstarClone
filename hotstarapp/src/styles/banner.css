@@ -69,13 +69,24 @@
 
 .banner .row .image img{
     margin-top: 4vh;
+    margin-left:1vh;
     height:10vh;
     width:20vb;
 }
-.banner .rows{
+.banner .shadow{
     position:absolute;
-    margin-top:98vh;
+    margin-top:42%;
     z-index:2 ;
     top:50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
+    height:20vh;
+    width:100%;
+}
+.banner .rows{
+    position:absolute;
+    margin-top:102.5vh;
+    z-index:2 ;
+    top:50%;
+    width:100%;
     background-color: black;
 }

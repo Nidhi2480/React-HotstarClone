@@ -29,6 +29,7 @@ function Content(){
                     
                 </div>
             </div>
+            <div className="shadow"></div>
             <div className="rows">
                 <Row title="Latest Releases" />
                 <Row title="Best in sports" />
