@@ -1,0 +1,100 @@
+.information {
+    position: absolute; 
+    top: 10vh;
+    left: 9%;
+    width: 90%;
+    min-width:60vb ;
+    background-color:rgb(0, 0, 0,0);
+    z-index: 2; 
+}
+
+.information .movieposter{
+        object-fit: contain;
+}
+.information .details,.category,.description{
+    width:70vb;
+}
+
+.information p{
+    margin-top: 1vh;
+    color:rgb(238, 233, 233);
+    margin-bottom: 2vh;
+}
+.information .description p{
+    margin-top: 3vh;
+    line-height: 1.5;
+    color:rgb(238, 233, 233,.8);
+    margin-bottom: 2vh;
+}
+.information .details p{
+    margin-top: 2vh;
+    
+    color:rgba(255, 255, 255, .8);
+    font-weight: bold;
+}
+.information .category p{
+    margin-top: 3vh;
+    color:rgba(255, 255, 255, .8);
+    font-weight: bold;
+}
+.information .details button{
+    border: 1px solid rgba(190, 187, 182, 0.1);
+    border-radius: 4px;
+    margin-top: 1vh;
+    padding: 0.4vh 2vh;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255,0.7);
+}
+.information .row1 .buttons{
+    width:50%;
+}
+.information .row1 .buttons .subscribe{
+    border: 1px solid rgba(190, 187, 182, 0.1);
+    border-radius: 10px;
+    margin-top: 4vh;
+    padding: 2.3vh 11vb;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    
+}
+.information .row1 .buttons .add{
+    border: 1px solid rgba(190, 187, 182, 0.1);
+    border-radius: 10px;
+    margin-left:2vb;
+    margin-top: 4vh;
+    padding: 2.3vh 3vb;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+}
+
+.information .row1{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.information .details .dot {
+    height: 4px;
+    width: 4px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    display: inline-block;
+    margin:4px 4px;
+  }
+.information .row1 .buttons .triangle {
+    border-top: 8px solid transparent;
+	border-left: 16px solid #ffffff;
+	border-bottom: 8px solid transparent;
+    display: inline-block;
+    margin-right:2px;
+  }

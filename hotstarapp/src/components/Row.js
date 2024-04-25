@@ -1,36 +1,51 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import "../styles/rowstyle.css"
-import movielogo1 from '../media/avatar.webp'
-import movielogo2 from '../media/avengers.webp'
-import movielogo3 from '../media/loki.webp'
-import movielogo4 from '../media/drstrange.webp'
-
-function Row({ title }) {
-    let timeoutId 
-    const [isHovered,setHovered]=useState(false)
-    const [activeimg,setactiveImage]=useState(null)
-    const handleMouseEnter = (navname) => {
-    timeoutId = setTimeout(() => {
-        setHovered(true)
-      }, 500);
-      
-      setactiveImage(navname)
+export default function App() {
+  const [data, setData] = useState([]);
+  const [isHovered, setHovered] = useState(false);
+  const [activeimg, setActiveImage] = useState(null);
+  const getData = async () => {
+    try {
+      const resp = await fetch('https://api.sampleapis.com/movies/classic');
+      const json = await resp.json();
+      setData(json);
+    } catch (error) {
+      console.error('Error fetching movie data:', error);
     }
-    const handleMouseLeave=()=>{
-      clearTimeout(timeoutId);
-      setHovered(false)
-    }
-    return (
-      <div className='row-movies'>
-      <h2>{title}</h2>
-      <div className='row-contents'>
-        <img src={movielogo1} className={`mov1 ${isHovered && activeimg === 'mov1' ? 'active': ''}`} onMouseEnter={()=> handleMouseEnter('mov1')} onMouseLeave={()=>handleMouseLeave()} alt="posters"/>
-        <img src={movielogo2}  className={`mov2 ${isHovered && activeimg === 'mov2' ? 'active': ''}`} onMouseEnter={()=> handleMouseEnter('mov2')} onMouseLeave={()=>handleMouseLeave()} alt="posters"/>
-        <img src={movielogo3}  className={`mov3 ${isHovered && activeimg === 'mov3' ? 'active': ''}`} onMouseEnter={()=> handleMouseEnter('mov3')} onMouseLeave={()=>handleMouseLeave()} alt="posters"/>
-        <img src={movielogo4}  className={`mov4 ${isHovered && activeimg === 'mov4' ? 'active': ''}`} onMouseEnter={()=> handleMouseEnter('mov4')} onMouseLeave={()=>handleMouseLeave()} alt="posters"/>
-      </div></div>
-     
-    );
-  }
+  };
 
-export default Row
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const handleMouseEnter = (navname) => {
+    setTimeout(() => {
+      setHovered(true);
+    }, 500);
+    setActiveImage(navname);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
+  return (
+    <div className="row-movies">
+      <h2>Classic Movies</h2>
+      <div className="row-contents">
+        {data.slice(5, 12).map((movie, index) => (
+          <div key={index} className={`mov ${isHovered && activeimg === `mov${index + 1}` ? 'active': ''}`}>
+            <img
+              src={movie.posterURL}
+              alt={`poster ${index}`}
+              onMouseEnter={() => handleMouseEnter(`mov${index + 1}`)}
+              onMouseLeave={handleMouseLeave}
+            />
+
+          </div>
+        ))}
+        <button class="scroll-button" id="scrollRight">&gt;</button>
+      </div>
+    </div>
+  );
+}
