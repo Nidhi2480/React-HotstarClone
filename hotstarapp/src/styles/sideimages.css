@@ -4,7 +4,12 @@
     height:7vh;
     width:14vb;
     border-radius: 5%;
+    transition: transform .2s ease;
 }
 .images{
     width:38%;
+    opacity: .7;
+}
+.images .image-active{
+    transform: scale(1.2);
 }

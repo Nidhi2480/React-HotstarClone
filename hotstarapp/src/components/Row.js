@@ -6,7 +6,7 @@ export default function App() {
   const [activeimg, setActiveImage] = useState(null);
   const getData = async () => {
     try {
-      const resp = await fetch('https://api.sampleapis.com/movies/classic');
+      const resp = await fetch('https://api.sampleapis.com/movies/family');
       const json = await resp.json();
       setData(json);
     } catch (error) {
@@ -21,7 +21,7 @@ export default function App() {
   const handleMouseEnter = (navname) => {
     setTimeout(() => {
       setHovered(true);
-    }, 500);
+    }, 300);
     setActiveImage(navname);
   };
 
@@ -31,9 +31,9 @@ export default function App() {
 
   return (
     <div className="row-movies">
-      <h2>Classic Movies</h2>
+      <h2>Drama Movies</h2>
       <div className="row-contents">
-        {data.slice(5, 12).map((movie, index) => (
+        {data.slice(10,).map((movie, index) => (
           <div key={index} className={`mov ${isHovered && activeimg === `mov${index + 1}` ? 'active': ''}`}>
             <img
               src={movie.posterURL}
