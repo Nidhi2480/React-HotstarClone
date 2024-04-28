@@ -1,0 +1,94 @@
+.row-movies{
+    position:relative;
+    left:0;
+
+    
+    margin-left: 7.5%;
+    color:white;
+    width:91%;
+    height:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:5vh;
+}
+
+.row-contents{
+    position:relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
+    border-radius: 7px;
+    display:flex;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+
+
+    
+}
+
+.row-contentshide-x{
+    position:relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
+    border-radius: 7px;
+    display:flex;
+
+    flex-wrap: nowrap;
+    scrollbar-width: none; 
+}
+.row-contentshide-x::-webkit-scrollbar{
+    display:none;
+
+}
+/* .row-contentshide-x > * {
+    align-self: flex-start;
+}
+*/
+.row-movies .row-contents .mov{
+    transition: transform .2s ease;
+    margin-right: 2vb;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.row-movies .row-contents .mov img{
+    object-fit: contain;
+    height: 37vh;
+    border-radius: 10px;
+}
+.row-movies .row-contents .mov.active{
+    transform:scale(1.2);
+    z-index: 5;
+}
+.row-movies button{
+    display: none;
+}
+.row-movies .scroll-left {
+    position: absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(to right,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    height:100%;
+    width: 7%;
+    z-index: 4;
+    display: block;
+    
+  }
+  .row-movies .scroll-right {
+    top:0;
+    position: absolute;
+    right:0;
+    background: linear-gradient(to left,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    height:100%;
+    display: block;
+    width: 7%;
+    z-index: 4;
+  }

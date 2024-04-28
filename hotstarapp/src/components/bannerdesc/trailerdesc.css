@@ -1,18 +1,21 @@
 .information {
     position: absolute; 
     top: 10vh;
-    left: 9%;
+    left: 7.5%;
     width: 90%;
-    min-width:60vb ;
     background-color:rgb(0, 0, 0,0);
     z-index: 2; 
 }
 
 .information .movieposter{
-        object-fit: contain;
+        object-fit:fill;
 }
-.information .details,.category,.description{
-    width:70vb;
+.information .details,.category{
+    width:60%;
+    min-width: 70%;
+}
+.information .description{
+    width:30%;
 }
 
 .information p{
@@ -61,6 +64,7 @@
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     color: rgb(255, 255, 255);
+    transition: all .2s ease;
     
 }
 .information .row1 .buttons .add{
@@ -74,8 +78,15 @@
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     color: rgb(255, 255, 255);
+    transition: all .2s ease;
 }
-
+.information .row1 .subscribe:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform:scale(1.02)
+}
+.information .row1 .add:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
 .information .row1{
     display:flex;
     justify-content: space-between;
@@ -98,3 +109,11 @@
     display: inline-block;
     margin-right:2px;
   }
+  @media screen and (max-width:65rem ) {
+    .information .description {
+        display: none;
+    }
+    .information .details{
+        display: none;
+    }
+}

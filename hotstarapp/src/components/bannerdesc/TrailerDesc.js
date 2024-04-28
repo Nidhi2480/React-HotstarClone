@@ -1,7 +1,7 @@
 import React from 'react'
-import movielogo from '../icons/starwars.webp'
-import Sideimages from './Sideimages';
-import '../styles/trailerdesc.css';
+import movielogo from '../../media/starwars.webp'
+import Sideimages from '../bannersideimg/Sideimages';
+import './trailerdesc.css';
 function TrailerDesc() {
   return (
     <div className="information">

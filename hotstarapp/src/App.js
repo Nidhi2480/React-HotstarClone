@@ -1,11 +1,12 @@
 import './App.css';
-import Whole from './components/Whole'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from "./components/sidebar/Nav"
+import Content from "./components/contents/Content"
 
 function App() {
   return (
     <div className="App">
-      <Whole/>
+         <Nav/> 
+        <Content />
     </div>
     
   );

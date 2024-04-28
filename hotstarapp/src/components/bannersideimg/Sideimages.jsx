@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import "../styles/sideimages.css"
-import smallposter from '../media/football.webp'
+import "./sideimages.css"
+import smallposter from '../../media/football.webp'
 function Sideimages() {
   const [isHovered,setHovered]=useState(false)
   const [imgname,setImage]=useState(null)

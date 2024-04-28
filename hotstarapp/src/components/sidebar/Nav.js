@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import '../styles/style.css';
-import homeLogo from '../icons/home.svg';
-import categoryLogo from '../icons/category.svg';
-import profileLogo from '../icons/profile.svg';
-import searchLogo from '../icons/search.svg';
-import sportsLogo from '../icons/sports.svg';
-import Logo from '../icons/logo-d-plus.svg';
-import tv from '../icons/tv.svg';
-import movies from '../icons/movies.svg';
+import './style.css';
+import homeLogo from './icons/home.svg';
+import categoryLogo from './icons/category.svg';
+import profileLogo from './icons/profile.svg';
+import searchLogo from './icons/search.svg';
+import sportsLogo from './icons/sports.svg';
+import Logo from './icons/logo-d-plus.svg';
+import tv from './icons/tv.svg';
+import movies from './icons/movies.svg';
 
 // Import the necessary icons
 
@@ -38,56 +38,56 @@ function Nav(){
                   <button className="button">Subscribe {">"}</button>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "profile" ? 'active' : ''}`} onMouseEnter={() => handleHover("profile")} onMouseLeave={handleLeave}>
-                      <img src={profileLogo} alt="profile" />
+                  <a href="/#" className={`nav-link ${activeNav === "profile" ? 'active' : ''}`}>
+                      <img src={profileLogo} alt="profile"  onMouseEnter={() => handleHover("profile")} onMouseLeave={handleLeave}/>
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "profile" ? 'active' : ''}`}>My Space</span>
                       )}
                   </a>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "search" ? 'active' : ''}`} onMouseEnter={() => handleHover("search")} onMouseLeave={handleLeave}>
-                      <img src={searchLogo} alt="Search" />
+                  <a href="/#" className={`nav-link ${activeNav === "search" ? 'active' : ''}`} >
+                      <img src={searchLogo} onMouseEnter={() => handleHover("search")} onMouseLeave={handleLeave} alt="Search" />
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "search" ? 'active' : ''}`}>Search</span>
                       )}
                   </a>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "home" ? 'active' : ''}`} onMouseEnter={() => handleHover("home")} onMouseLeave={handleLeave}>
-                      <img src={homeLogo} alt="Home" />
+                  <a href="/#" className={`nav-link ${activeNav === "home" ? 'active' : ''}`} >
+                      <img src={homeLogo} onMouseEnter={() => handleHover("home")} onMouseLeave={handleLeave} alt="Home" />
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "home" ? 'active' : ''}`}>Home</span>
                       )}
                   </a>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "tv" ? 'active' : ''}`} onMouseEnter={() => handleHover("tv")} onMouseLeave={handleLeave}>
-                      <img src={tv} alt="TV" />
+                  <a href="/#" className={`nav-link ${activeNav === "tv" ? 'active' : ''}`}>
+                      <img src={tv}  onMouseEnter={() => handleHover("tv")} onMouseLeave={handleLeave} alt="TV" />
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "tv" ? 'active' : ''}`}>TV</span>
                       )}
                   </a>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "movies" ? 'active' : ''}`} onMouseEnter={() => handleHover("movies")} onMouseLeave={handleLeave}>
-                      <img src={movies} alt="Movies" />
+                  <a href="/#" className={`nav-link ${activeNav === "movies" ? 'active' : ''}`} >
+                      <img src={movies} onMouseEnter={() => handleHover("movies")} onMouseLeave={handleLeave} alt="Movies" />
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "movies" ? 'active' : ''}`}>Movies</span>
                       )}
                   </a>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "sports" ? 'active' : ''}`} onMouseEnter={() => handleHover("sports")} onMouseLeave={handleLeave}>
-                      <img src={sportsLogo} alt="Sports" />
+                  <a href="/#" className={`nav-link ${activeNav === "sports" ? 'active' : ''}`} >
+                      <img src={sportsLogo}onMouseEnter={() => handleHover("sports")} onMouseLeave={handleLeave} alt="sports" />
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "sports" ? 'active' : ''}`}>Sports</span>
                       )}
                   </a>
               </li>
               <li>
-                  <a href="/#" className={`nav-link ${activeNav === "category" ? 'active' : ''}`} onMouseEnter={() => handleHover("category")} onMouseLeave={handleLeave}>
-                      <img src={categoryLogo} alt="Categories" />
+                  <a href="/#" className={`nav-link ${activeNav === "category" ? 'active' : ''}`}>
+                      <img src={categoryLogo}  onMouseEnter={() => handleHover("category")} onMouseLeave={handleLeave} alt="Categories" />
                       {isHovered && (
                           <span className={`nav-text ${activeNav === "category" ? 'active' : ''}`}>Categories</span>
                       )}

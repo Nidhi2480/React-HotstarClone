@@ -2,18 +2,18 @@
     background-color: rgb(34, 32, 32);
 }
 .nav-bar {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+ 
     position: fixed;
-    width: 15%;
+    width: 7%;
     left: 0;
     top: 15px;
     bottom: 0;
     color: aliceblue;
     transition: all 0.5s ease;
     min-height:150px;
-    z-index: 4;
+    min-width: 90px;
+    z-index: 3;
     overflow-x: hidden;
 }
 .nav-bar ul {
@@ -22,14 +22,14 @@
     margin: 0;
 }
 .nav-bar ul li .nav-link{
-    margin-bottom: 6vh;
-    margin-left: 6vh;
+    margin-bottom: 5.3vh;
+    margin-left: 5vh;
     width:150px;    
 }
 .nav-bar .logo { 
-    margin-top:3vh;
-    margin-left: 3.4vh;
-    height: 36px;
+    margin-top:2.4vh;
+    margin-left: 3.1vh;
+    height: 37px;
     width: 51px;
 }
 
@@ -41,23 +41,24 @@
     transition: transform 0.3s ease;
 }
 .nav-bar ul li img {
-    width:20px;
-    transition: transform 0.3s ease;
+    width:22px;
+    transition: transform 0.3s ease-out;
 }
 .nav-bar .nav-link.active img {
-    transform: scale(1.2) translateX(3px);
+    transform: scale(1) translateX(3px);
 }
 .nav-bar .button {
     border: 1px solid rgba(235, 156, 9, 0.1);
     border-radius: 10px;
     margin-left: 1vh;
-    margin-top: 1vh;
-    margin-bottom: 8vh;
-    padding: 0.4vh 2vh;
+    margin-top: 1.5vh;
+    margin-bottom: 10vh;
+    padding: 0.2vh 1.1vh;
+
     cursor: pointer;
     font-size: 12.5px;
     background-color: rgba(201, 171, 37, 0.2);
-    color: rgb(255, 187, 0);
+    color: rgb(223, 194, 114);
 }
 
 .nav-text ul {
@@ -67,7 +68,7 @@
 }
 .nav-bar.expanded {
     width: 60vw;
-    background: linear-gradient(to right,  rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)); /* Linear gradient from solid color to transparent */
+    background: linear-gradient(to right,  rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)); 
    
 }
 .nav-text {
@@ -80,5 +81,6 @@
 
 .nav-text.active {
     display: inline-block;
-    transform: scale(1.2) translateX(5px); 
+    transform: scale(1.2) translateX(5px);
+    font-weight: bold;
 }
