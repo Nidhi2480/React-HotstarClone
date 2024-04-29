@@ -15,17 +15,19 @@
     min-width: 70%;
 }
 .information .description{
-    width:30%;
+    width:39%;
 }
 
 .information p{
     margin-top: 1vh;
     color:rgb(238, 233, 233);
     margin-bottom: 2vh;
+   
 }
 .information .description p{
     margin-top: 3vh;
     line-height: 1.5;
+    font-weight: normal;
     color:rgb(238, 233, 233,.8);
     margin-bottom: 2vh;
 }

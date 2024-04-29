@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import "./card.css"
 function Card({ movie,smallRow,onMouseEnter, onMouseLeave }){
-    const handleMouseEnter = () => {
+  const [activeCard,setActivecard]=useState(null)
+    const handleMouseEnter = (activecard) => {
+        setActivecard(activecard)
         onMouseEnter();
       };
     
       const handleMouseLeave = () => {
         onMouseLeave();
+        setActivecard(null)
       };
+
+
     return (
-        <div className={`card ${smallRow?'small':""}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className={`card ${smallRow?'small':""} ${activeCard===movie.id?'active':""}`} onMouseEnter={()=>{handleMouseEnter(movie.id)}} onMouseLeave={handleMouseLeave}>
             <div className="image">
                 <img src={movie.posterURL} alt="test" />
             </div>
@@ -19,7 +24,7 @@ function Card({ movie,smallRow,onMouseEnter, onMouseLeave }){
                 <button className='add'> + </button>
             </div>
           <div className="card-description">
-            {!smallRow && (<p>2019 <span className="dot"></span> 2h 22m 4 <span className="dot"></span> languages <span className="dot"></span> <button>U/A 13+</button></p>)}
+           <p>2019 <span className="dot"></span> 2h 22m 4 <span className="dot"></span> languages <span className="dot"></span>U/A 13+</p>
             <p className="title">{movie.title}
 
             </p>

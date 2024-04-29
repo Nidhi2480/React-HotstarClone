@@ -7,16 +7,17 @@
 
 .banner .shadow{
     position:absolute;
-    margin-top:52.9vh;
+    margin-top:48.9vh;
     z-index:1 ;
     top:50%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
-    height:30vh;
+    height:34vh;
     width:100%;
 }
 .banner .rows{
     position:absolute;
-    background:linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7));
+    background:linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0),
+    rgba(0, 0, 0),rgba(0, 0, 0),rgba(0, 0, 0) ,rgba(0, 0, 0), rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7));
     margin-top:82.9vh;
 
     z-index:2 ;

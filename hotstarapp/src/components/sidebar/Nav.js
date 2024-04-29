@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import './style.css';
-import homeLogo from './icons/home.svg';
-import categoryLogo from './icons/category.svg';
-import profileLogo from './icons/profile.svg';
-import searchLogo from './icons/search.svg';
-import sportsLogo from './icons/sports.svg';
-import Logo from './icons/logo-d-plus.svg';
-import tv from './icons/tv.svg';
-import movies from './icons/movies.svg';
+import homeLogo from '../../media/icons/home.svg';
+import categoryLogo from '../../media/icons/category.svg';
+import profileLogo from '../../media/icons/profile.svg';
+import searchLogo from '../../media/icons/search.svg';
+import sportsLogo from '../../media/icons/sports.svg';
+import Logo from '../../media/icons/logo-d-plus.svg';
+import tv from '../../media/icons/tv.svg';
+import movies from '../../media/icons/movies.svg';
 
 // Import the necessary icons
 

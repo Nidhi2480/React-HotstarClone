@@ -1,16 +1,15 @@
 .images img{
     margin-top: 4vh;
-    margin-left:1vh;
+    margin-left:1vb;
     height:7vh;
     width:14vb;
     border-radius: 5%;
     transition: transform .2s ease;
 }
 .images{
-    width:38%;
+    width:60vb;
     opacity: .7;
-    display:flex;
-    flex-wrap:nowrap;
+
 }
 .images .image-active{
     transform: scale(1.2);
