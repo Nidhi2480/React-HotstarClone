@@ -13,7 +13,7 @@
     transition: all 0.5s ease;
     min-height:150px;
     min-width: 90px;
-    z-index: 3;
+    z-index: 4;
     overflow-x: hidden;
 }
 .nav-bar ul {
@@ -23,7 +23,7 @@
 }
 .nav-bar ul li .nav-link{
     margin-bottom: 5.3vh;
-    margin-left: 5vh;
+    margin-left: 6vh;
     width:150px;    
 }
 .nav-bar .logo { 
@@ -52,7 +52,7 @@
     border-radius: 10px;
     margin-left: 1vh;
     margin-top: 1.5vh;
-    margin-bottom: 10vh;
+    margin-bottom: 6vh;
     padding: 0.2vh 1.1vh;
 
     cursor: pointer;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './style.css';
 import homeLogo from '../../media/icons/home.svg';
 import categoryLogo from '../../media/icons/category.svg';
 import profileLogo from '../../media/icons/profile.svg';
@@ -8,6 +7,7 @@ import sportsLogo from '../../media/icons/sports.svg';
 import Logo from '../../media/icons/logo-d-plus.svg';
 import tv from '../../media/icons/tv.svg';
 import movies from '../../media/icons/movies.svg';
+import './style.css';
 
 // Import the necessary icons
 

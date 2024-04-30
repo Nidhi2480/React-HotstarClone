@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './rowstyle.css';
 import Card from '../card/Card';
+import './rowstyle.css';
 
 export default function App({ rowName, apiUrl, smallRow }) {
   const [data, setData] = useState([]);
-  const [iscardHovered, setcardHovered] = useState(false);
-  const [displayedMoviesIndex, setDisplayedMoviesIndex] = useState(0);
+  const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
+
   const [isNavHovered, setNavHovered] = useState(false);
+  const [isCardHovered, setCardHovered] = useState(false);
   const rowContentRef = useRef(null);
 
   useEffect(() => {
@@ -22,53 +23,56 @@ export default function App({ rowName, apiUrl, smallRow }) {
     getData();
   }, [apiUrl]);
 
-  const handleMouseEnter = () => {
-    setcardHovered(true);
+  const handleMouseEnter = (id) => {
+    setCardHovered(true);
+    setHoveredCardIndex(id);
+    console.log(id)
   };
 
   const handleMouseLeave = () => {
-    setcardHovered(false);
+    setCardHovered(false);
+    setHoveredCardIndex(null);
   };
 
-  const handlenavMouseEnter = () => {
+  const handleNavMouseEnter = () => {
     setNavHovered(true);
-  }
-  const handlenavMouseLeave = () => {
-    setNavHovered(false);
-  }
-  
+  };
 
+  const handleNavMouseLeave = () => {
+    setNavHovered(false);
+  };
 
   const handleScrollRight = () => {
-    const nextIndex = displayedMoviesIndex +1;
-    if (nextIndex <= data.length - 7) {
-      setDisplayedMoviesIndex(nextIndex);
-    }
+    rowContentRef.current.scrollLeft += 100; 
   };
 
   const handleScrollLeft = () => {
-    const prevIndex = displayedMoviesIndex - 1;
-    if (prevIndex >= 0) {
-      setDisplayedMoviesIndex(prevIndex);
-    }
+    rowContentRef.current.scrollLeft -= 100; 
   };
 
   return (
     <>
-      <h2 style={{ color: 'white', marginLeft: `15vb`,fontSize:`18px`,fontWeight:`normal` }}>{rowName}</h2>
-      <div className="row-movies" onMouseEnter={handlenavMouseEnter} onMouseLeave={handlenavMouseLeave}>
-        <div className={`row-contents${iscardHovered? 'hide-x':''}`} ref={rowContentRef}>
-          {data.slice(displayedMoviesIndex, displayedMoviesIndex + 10).map((movie, index) => (
-            <Card key={index} movie={movie} smallRow={smallRow} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+      <h2 style={{ color: 'white', marginLeft: `19vb`, fontSize: `20px`, fontWeight: `bold` }}>{rowName}</h2>
+      <div className="row-movies" onMouseEnter={handleNavMouseEnter} onMouseLeave={handleNavMouseLeave}>
+        <div className={`row-contents${isCardHovered ? ' hide-x' : ''}`} ref={rowContentRef}>
+          {data.map((movie, index) => (
+            <Card
+              key={index}
+              movie={movie}
+              smallRow={smallRow}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              isHovered={movie.id === hoveredCardIndex}
+            />
           ))}
         </div>
         {isNavHovered && (
           <>
             <button className="scroll-right" id="scrollRight" onClick={handleScrollRight}>
-            <i className="arrow right"/>
+              <i className="arrow right" />
             </button>
             <button className="scroll-left" id="scrollLeft" onClick={handleScrollLeft}>
-            <i className="arrow left"/>
+              <i className="arrow left" />
             </button>
           </>
         )}

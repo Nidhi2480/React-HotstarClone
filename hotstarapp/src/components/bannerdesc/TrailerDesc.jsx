@@ -1,6 +1,7 @@
 import React from 'react'
-import movielogo from '../../media/starwars.webp'
 import Sideimages from '../bannersideimg/Sideimages';
+import movielogo from '../../media/starwars.webp'
+import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
 function TrailerDesc() {
   return (
@@ -14,13 +15,14 @@ function TrailerDesc() {
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>
+        <img src={unMute} alt="volume"/>
     </div>
     <div className="row1">
 
         <div className="buttons">
             <button className='subscribe'><span className="triangle"></span> Subscribe to Watch</button>
             <button className='add'> + </button></div>
-        <Sideimages />
+            <Sideimages />
         
         
     </div>

@@ -1,23 +1,28 @@
 .information {
     position: absolute; 
     top: 10vh;
-    left: 7.5%;
-    width: 90%;
+    left: 9.5%;
+    width: 83%;
     background-color:rgb(0, 0, 0,0);
-    z-index: 2; 
+    z-index: 3; 
+
 }
 
 .information .movieposter{
         object-fit:fill;
 }
-.information .details,.category{
+.information .details{
     width:60%;
     min-width: 70%;
 }
 .information .description{
-    width:39%;
+    width:45%;
 }
-
+.information .category{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
 .information p{
     margin-top: 1vh;
     color:rgb(238, 233, 233);

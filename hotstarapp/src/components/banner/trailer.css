@@ -1,11 +1,10 @@
 .movie-trailer {
     width: 100%;
-    min-width:68vb;
+    min-width:700px;
     position: fixed; 
     z-index: 1; 
     background-color: black;
 }
 .movie-trailer video{
     width:100%;
-    min-width:60vb;
 }

@@ -1,8 +1,8 @@
 .row-movies{
     position:relative;
-    left: 7.5%;
+    left: 9.5%;
     color:white;
-    width:91%;
+    width:88%;
     height:100%;
     padding-top:10px;
     padding-bottom:10px;
@@ -10,7 +10,6 @@
 }
 .row-contents{
     position:relative;
-
     border-radius: 12px;
     display:flex;
     flex-wrap: nowrap;
@@ -23,12 +22,12 @@
     
 }
 
-.row-contentshide-x{
-    position:relative;
+.row-contents.hide-x{
+    
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
     border-radius: 7px;
     display:flex;
-    
+    overflow-x: visible;
     scrollbar-width: none; 
 }
 .row-contentshide-x::-webkit-scrollbar{

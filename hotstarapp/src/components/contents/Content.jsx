@@ -1,9 +1,8 @@
 import React from "react"
-import './banner.css';
 import Row from "../movielistrow/Row"
-
 import Trailer from "../banner/Trailer"
 import TrailerDesc from "../bannerdesc/TrailerDesc";
+import './contents.css';
 function Content(){
     return (
      
