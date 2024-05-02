@@ -3,7 +3,9 @@ import Sideimages from '../bannersideimg/Sideimages';
 import movielogo from '../../media/starwars.webp'
 import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
-function TrailerDesc() {
+function TrailerDesc({changebanner}) {
+
+
   return (
     <div className="information">
     <img className="movieposter" src={movielogo} alt="movieposter" />
@@ -22,7 +24,7 @@ function TrailerDesc() {
         <div className="buttons">
             <button className='subscribe'><span className="triangle"></span> Subscribe to Watch</button>
             <button className='add'> + </button></div>
-            <Sideimages />
+            <Sideimages changeBanner={changebanner}/>
         
         
     </div>

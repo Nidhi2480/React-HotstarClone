@@ -6,21 +6,30 @@
 }
 
 .banner .shadow{
-    position:absolute;
-    margin-top:53.9vh;
+    position:relative;
     z-index:2 ;
-    top:50%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
-    height:34vh;
+    top:62.9vh;
+    background: linear-gradient(to top, rgba(17, 16, 16, 0.7), rgba(17, 16, 16, 0.2), rgba(17, 16, 16, .1),rgba(17, 16, 16, 0));
+    height:25vh;
     width:100%;
 }
 .banner .rows{
-    position:absolute;
-    background:linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0),
-    rgba(0, 0, 0),rgba(0, 0, 0),rgba(0, 0, 0) ,rgba(0, 0, 0), rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7));
-    margin-top:87.9vh;
-
+    position:relative;
+    top:62.9vh;
+    background:linear-gradient(to top, rgb(17, 16, 16), rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16),
+    rgb(17, 16, 16,0.9),
+    rgb(17, 16, 16,0.8),
+    rgb(17, 16, 16,0.7));
     z-index:2 ;
-    top:50%;
+ 
     width:100%;
 }

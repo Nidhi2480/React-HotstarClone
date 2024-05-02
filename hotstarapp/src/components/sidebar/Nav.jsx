@@ -35,7 +35,7 @@ function Nav(){
                   <img className="logo" src={Logo} alt="logo" />
               </li>
               <li>
-                  <button className="button">Subscribe {">"}</button>
+                  <button className="button"><p>Subscribe {">"}</p></button>
               </li>
               <li>
                   <a href="/#" className={`nav-link ${activeNav === "profile" ? 'active' : ''}`}>

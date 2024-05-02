@@ -22,13 +22,13 @@
     margin: 0;
 }
 .nav-bar ul li .nav-link{
-    margin-bottom: 5.3vh;
-    margin-left: 6vh;
+    margin-bottom: 6.2vh;
+    margin-left: 5.5vb;
     width:150px;    
 }
 .nav-bar .logo { 
     margin-top:2.4vh;
-    margin-left: 3.1vh;
+    margin-left: 3.1vb;
     height: 37px;
     width: 51px;
 }
@@ -50,9 +50,9 @@
 .nav-bar .button {
     border: 1px solid rgba(235, 156, 9, 0.1);
     border-radius: 10px;
-    margin-left: 1vh;
+    margin-left: 1vb;
     margin-top: 1.5vh;
-    margin-bottom: 6vh;
+    margin-bottom: 8vh;
     padding: 0.2vh 1.1vh;
 
     cursor: pointer;

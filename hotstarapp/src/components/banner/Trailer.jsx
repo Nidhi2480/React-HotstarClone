@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import trailer from '../../media/starwars.mp4';
+
 import './trailer.css';
 
-function Trailer() {
+function Trailer({trailer,banner}) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -25,15 +25,21 @@ function Trailer() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [trailer]);
 
-  return (
-    <div className="movie-trailer">
-      <video ref={videoRef} autoPlay muted loop>
-        <source src={trailer} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  return (<>
+  {trailer && (<div className="movie-trailer">
+  <video ref={videoRef} autoPlay muted loop>
+    <source src={trailer} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>)}
+  {banner && (<div className="movie-trailer">
+
+    <img src={banner} alt={banner}/>
+    </div>)}
+    </>
+    
   );
 }
 
