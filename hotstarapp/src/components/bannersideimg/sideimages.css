@@ -2,19 +2,21 @@
     margin-top: 4vh;
     margin-left:1vb;
     height:7vh;
-    width:14vb;
+    width:12vb;
+    height:7vh;
     border-radius: 5%;
     transition: transform .2s ease;
 }
 .images{
-    width:60vb;
+    width:50vb;
     opacity: .7;
 
 }
+
 .images .image-active{
     transform: scale(1.1);
     padding-left:1px;
     padding-right:1px;
- 
+    
     opacity: 1;
 }

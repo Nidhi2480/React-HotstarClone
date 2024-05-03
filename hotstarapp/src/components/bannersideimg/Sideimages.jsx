@@ -8,6 +8,7 @@ import smallposter2 from '../../media/varathan.webp';
 import smallposter3 from '../../media/avengers.webp';
 import smallposter4 from '../../media/lion.webp';
 import smallposter5 from '../../media/loki.webp';
+import smallposter6 from '../../media/starwarsbanner.webp';
 import "./sideimages.css";
 function Sideimages({changeBanner}) {
 
@@ -35,7 +36,9 @@ function Sideimages({changeBanner}) {
 
       <div className="images">
         <Slider {...settings}>
-    
+        <div>
+          <img className={`${isHovered && imgname === smallposter6 ? 'image-active' : ''}`} src={smallposter6} onClick={() => handleEnter(smallposter6)} onMouseLeave={() => setHovered(false)} alt="posters" />
+        </div>
         <div>
           <img className={`${isHovered && imgname === smallposter0 ? 'image-active' : ''}`} src={smallposter0} onClick={() => handleEnter(smallposter0)} onMouseLeave={() => setHovered(false)} alt="posters" />
         </div>

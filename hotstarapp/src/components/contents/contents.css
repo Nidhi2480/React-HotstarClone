@@ -9,26 +9,24 @@
     position:relative;
     z-index:2 ;
     top:62.9vh;
-    background: linear-gradient(to top, rgba(17, 16, 16, 0.7), rgba(17, 16, 16, 0.2), rgba(17, 16, 16, .1),rgba(17, 16, 16, 0));
+    background: linear-gradient(to top, rgba(18, 19, 27, 0.7), rgba(18, 19, 27, 0.2), rgba(18, 19, 27, .1),rgba(18, 19, 27, 0));
     height:25vh;
     width:100%;
 }
 .banner .rows{
     position:relative;
     top:62.9vh;
-    background:linear-gradient(to top, rgb(17, 16, 16), rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16),
-    rgb(17, 16, 16,0.9),
-    rgb(17, 16, 16,0.8),
-    rgb(17, 16, 16,0.7));
+    background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27,.9),
+    rgb(18, 19, 27,.8),
+    rgb(18, 19, 27,.7));
     z-index:2 ;
  
     width:100%;

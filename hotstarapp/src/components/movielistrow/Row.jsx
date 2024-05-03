@@ -73,7 +73,7 @@ export default function App({ rowName, apiUrl, smallRow }) {
             />
           ))}
         </div>
-        {isNavHovered && !isCardHovered &&(
+        {isNavHovered && (
           <>
             <button className="scroll-right" id="scrollRight" onClick={handleScrollRight}>
               <i className="arrow right" />

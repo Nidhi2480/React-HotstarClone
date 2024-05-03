@@ -1,5 +1,6 @@
 import React from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 function Card({ movie, smallRow, onMouseEnter, onMouseLeave,ishovered}) {
   let timeoutId;
@@ -24,15 +25,17 @@ function Card({ movie, smallRow, onMouseEnter, onMouseLeave,ishovered}) {
         <img src={movie.posterURL} alt="test" />
       </div>
       <p className="title1">{movie.title}</p>
-      
-      <div className="Activecard">
+     <div className="Activecard">
       <div className="image">
         <img src={movie.posterURL} alt="test" />
+        {/* <video><source src={trailer} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video> */}
       </div>
         <div className="card-shadow"></div>
         <div className="card-buttons">
           <button className="watch-now">
-            <span className="card-triangle"></span> Watch Now
+          <Link to={`/movies/${movie.id}`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>
           </button>
           <button className="add"> + </button>
         </div>
@@ -45,6 +48,7 @@ function Card({ movie, smallRow, onMouseEnter, onMouseLeave,ishovered}) {
           <p className="title">{movie.title}</p>
         </div>
       </div>
+      
     </div>
     
       

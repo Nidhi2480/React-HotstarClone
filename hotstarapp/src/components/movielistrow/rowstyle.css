@@ -9,7 +9,6 @@
   margin-bottom:5vh;
 }
 .row-contents{
-  height: 222px;
   border-radius: 12px;
   display:flex;
   flex-wrap: nowrap;
@@ -17,6 +16,8 @@
   width:100%;
   scroll-behavior: smooth;
   scrollbar-width: none; 
+  padding-top:5px;
+  padding-bottom:5px;
 
 
   
@@ -56,6 +57,7 @@
   position: absolute;
   top:0;
   left:0;
+  width:2vb;
   background: linear-gradient(to right,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
   color: rgb(255, 255, 255);
   border: none;
@@ -82,7 +84,7 @@
   height:100%;
   display: block;
   width: 7%;
-  z-index: 3;
+  z-index: 4;
   transition: all .2s ease;
 }
 .arrow {

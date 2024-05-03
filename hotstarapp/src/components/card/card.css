@@ -31,14 +31,31 @@
 
 
   .card.small {
-    height:150px;
+    height:160px;
     width:220px;
   }
   .card.small .title1{
     display:block;
+    height:20%;
   }
+  .card.small .image{
+    height:75%;
 
+  }
+  .card.small .Activecard {
+    opacity:0;
+    position: absolute;
+    top:0;
+    transition: all 0.5s ease;
+    transition-delay: .5s;
+    height: 220px;
+    width: 250px;
+    background-color: rgb(18, 19, 27);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+    border-radius: 7px;
 
+  
+  }
 
 
 
@@ -51,7 +68,7 @@
     transition-delay: .5s;
     height: 280px;
     width: 220px;
-    background-color: rgb(27, 26, 26);
+    background-color: rgb(18, 19, 27);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
 
@@ -72,6 +89,12 @@
 
 }
 
+
+.card .Activecard .image video{
+  width:100%;
+  border-radius: 13px;
+
+}
 
 .card .Activecard .card-description{
     font-size: 12px;

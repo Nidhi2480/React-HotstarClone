@@ -9,8 +9,6 @@ import tv from '../../media/icons/tv.svg';
 import movies from '../../media/icons/movies.svg';
 import './style.css';
 
-// Import the necessary icons
-
 function Nav(){
   const [isHovered, setIsHovered] = useState(false);
   const [activeNav, setActiveNav] = useState(null);

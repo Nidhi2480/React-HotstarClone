@@ -10,10 +10,10 @@ function TrailerDesc({changebanner}) {
     <div className="information">
     <img className="movieposter" src={movielogo} alt="movieposter" />
     <div className="details">
-        <p>2019 <span className="dot"></span> 2h 22m 4 <span className="dot"></span> languages <span className="dot"></span> <button>U/A 13+</button></p>
+        <p>2019 <span className="dot"></span> 2h 22m <span className="dot"></span>4 languages <span className="dot"></span> <button>U/A 13+</button></p>
     </div>
     <div className="description">
-        <p>Star Wars: The Rise of Skywalker (also known as Star Wars: Episode IX – The Rise of Skywalker) is a 2019 American epic space opera film produced, co-written, ... </p>
+        <p>Star Wars: The Rise of Skywalker (also known as Star Wars: Episode IX – The Rise of Skywalker) is a 2019 American epic space opera  ... </p>
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>
