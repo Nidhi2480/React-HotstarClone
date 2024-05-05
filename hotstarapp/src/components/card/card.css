@@ -1,7 +1,7 @@
 .card {
 
-    height: 220px;
-    width: 150px;
+    height:35vh;
+    width: 25vb;
    
     color: rgb(247, 247, 247);
 
@@ -27,12 +27,13 @@
   }
   .card .title1{
     display:none;
+   
   }
 
 
   .card.small {
-    height:160px;
-    width:220px;
+    height:27vh;
+    width:38vb;
   }
   .card.small .title1{
     display:block;
@@ -66,8 +67,8 @@
     top:0;
     transition: all 0.5s ease;
     transition-delay: .5s;
-    height: 280px;
-    width: 220px;
+    height: 45vh;
+    width: 35vb;
     background-color: rgb(18, 19, 27);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
@@ -97,7 +98,7 @@
 }
 
 .card .Activecard .card-description{
-    font-size: 12px;
+ 
     display:block;
     height: 10vh;
 
@@ -106,7 +107,7 @@
     margin-top: 2vh;
     
     display:block;
-    height: 10vh;
+    height: 7vh;
 }
  .card .Activecard .image  img{
     height:100%;
@@ -118,10 +119,11 @@
 }
 
 .card .Activecard .card-description .category{
-    font-size: 8px;
+    font-size: 13px;
 }
 .card .Activecard .card-description .title{
-    font-size: 12px;
+    font-size: 11px;
+    color: rgb(148, 148, 178);
 }
   
 

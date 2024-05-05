@@ -1,27 +1,39 @@
-import React,{useState,useEffect} from "react"
+import React,{useEffect} from "react"
 import { useParams } from "react-router-dom";
 import Trailer from "../banner/Trailer"
 import TrailerDesc from "../bannerdesc/TrailerDesc";
 import Trailervid from '../../media/starwars.mp4';
-import TrailerImage from '../../media/starwarsbanner.webp';
 
-function Header(){
-    const [isbanner,setBanner]=useState(TrailerImage)
+
+function Header({changeBanner,isBanner}){
+    
     const { id } = useParams();
-
     useEffect(() => {
+        const fetchMovie = async () => {
+            try {
+                const response = await fetch(`https://api.sampleapis.com/movies/family/${id}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(data.posterURL)
+                    changeBanner(data.posterURL);
+                } else {
+                    throw new Error('Failed to fetch movie');
+                }
+            } catch (error) {
+                console.error('Error fetching movie:', error);
+            }
+        };
+
         if (id) {
-            console.log(id)
+            fetchMovie();
         }
     }, [id]);
 
-    const changeBanner=(url)=>
-    {
-        setBanner(url)
-    }
+
+   
     return (
         <>
-        <Trailer trailer={Trailervid} banner={isbanner}/> 
+        <Trailer trailer={Trailervid} banner={isBanner}/> 
         <TrailerDesc changebanner={changeBanner} />   
         </>
 

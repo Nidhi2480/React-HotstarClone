@@ -1,0 +1,18 @@
+.movie-details{
+    position:relative;
+    top:61.9vh;
+    background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27),
+    rgb(18, 19, 27,.9),
+    rgb(18, 19, 27,.8),
+    rgb(18, 19, 27,.7));
+    z-index:2 ;
+    height:70vh;
+    width:100%;
+  }

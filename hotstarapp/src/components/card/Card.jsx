@@ -18,6 +18,7 @@ function Card({ movie, smallRow, onMouseEnter, onMouseLeave,ishovered}) {
   return (
     <>
     <div
+      key={movie.id}
       className={`card ${smallRow ? "small" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
