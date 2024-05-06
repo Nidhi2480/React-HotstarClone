@@ -3,17 +3,17 @@ import Sideimages from '../bannersideimg/Sideimages';
 import movielogo from '../../media/starwars.webp'
 import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
-function TrailerDesc({changebanner}) {
+function TrailerDesc({changebanner,movie}) {
 
 
   return (
     <div className="information">
-    <img className="movieposter" src={movielogo} alt="movieposter" />
+    <img className="movieposter" src={movie.logo} alt="movieposter" />
     <div className="details">
-        <p>2019 <span className="dot"></span> 2h 22m <span className="dot"></span>4 languages <span className="dot"></span> <button>U/A 13+</button></p>
+        <p>{movie.genre.year}<span className="dot"></span> {movie.genre.length}<span className="dot"></span>{movie.genre.languages} <span className="dot"></span> <button>{movie.genre.ua}</button></p>
     </div>
     <div className="description">
-        <p>Star Wars: The Rise of Skywalker (also known as Star Wars: Episode IX – The Rise of Skywalker) is a 2019 American epic space opera  ... </p>
+        <p>{movie.description} </p>
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>

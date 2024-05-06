@@ -8,14 +8,13 @@
 .banner .shadow{
     position:relative;
     z-index:2 ;
-    top:62.9vh;
     background: linear-gradient(to top, rgba(18, 19, 27, 0.7), rgba(18, 19, 27, 0.2), rgba(18, 19, 27, .1),rgba(18, 19, 27, 0));
     height:25vh;
     width:100%;
 }
 .banner .rows{
     position:relative;
-    top:62.9vh;
+  
     background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27),
     rgb(18, 19, 27),
     rgb(18, 19, 27),

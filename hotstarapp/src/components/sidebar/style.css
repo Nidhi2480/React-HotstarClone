@@ -7,7 +7,7 @@
     position: fixed;
     width: 7%;
     left: 0;
-    top: 15px;
+    top: 0;
     bottom: 0;
     color: aliceblue;
     transition: all 0.5s ease;
@@ -27,8 +27,8 @@
     width:150px;    
 }
 .nav-bar .logo { 
-    margin-top:2.4vh;
-    margin-left: 3.1vb;
+    margin-top:5.4vh;
+    margin-left: 3.3vb;
     height: 37px;
     width: 51px;
 }
@@ -45,20 +45,20 @@
     transition: transform 0.3s ease-out;
 }
 .nav-bar .nav-link.active img {
-    transform: scale(1) translateX(3px);
+    transform: scale(1.05) translateX(3px);
 }
 .nav-bar .button {
     border: 1px solid rgba(235, 156, 9, 0.1);
     border-radius: 10px;
     margin-left: 1vb;
     margin-top: 1.5vh;
-    margin-bottom: 8vh;
+    margin-bottom: 6.5vh;
     padding: 0.2vh 1.1vh;
 
     cursor: pointer;
     font-size: 12.5px;
     background-color: rgba(201, 171, 37, 0.2);
-    color: rgb(223, 194, 114);
+    color: rgb(248, 200, 144);
 }
 
 .nav-text ul {

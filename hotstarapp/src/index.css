@@ -1,6 +1,6 @@
 body {
 
-  font-family: "Inter", sans-serif;
+  font-family: Avenir-Roman, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
@@ -13,4 +13,21 @@ body::-webkit-scrollbar{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media only screen and (min-width:768px){
+  body{
+    font-size: 16px;
+  }
+}
+
+@media only screen and(min-width:480px) and (max-width:768px){
+  body{
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width:479px){
+  body{
+    font-size: 14px;
+  }
 }

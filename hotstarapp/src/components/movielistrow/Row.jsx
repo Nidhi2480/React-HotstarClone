@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../card/Card';
-import Footer from "../footer/Footer";
+
 import './rowstyle.css';
 
 export default function App({ rowName, apiUrl, smallRow }) {

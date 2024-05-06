@@ -1,6 +1,6 @@
 .card {
 
-    height:35vh;
+    height:33vh;
     width: 25vb;
    
     color: rgb(247, 247, 247);
@@ -15,7 +15,7 @@
   .card .image {
     width: 100%;
     height: 100%;
-    border-radius: 7px;
+    border-radius: 5px;
 
   }
   
@@ -23,7 +23,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
-    border-radius: 7px;
+    border-radius: 5px;
   }
   .card .title1{
     display:none;
@@ -32,8 +32,8 @@
 
 
   .card.small {
-    height:27vh;
-    width:38vb;
+    height:25vh;
+    width:33vb;
   }
   .card.small .title1{
     display:block;
@@ -57,9 +57,18 @@
 
   
   }
+  .card.small .Activecard .image{
+    width:100%;
+    height:70%;
+    border-radius: 13px;
 
-
-
+}
+.card.small .Activecard .card-buttons{
+  display: none;
+}
+.card.small .Activecard  .card-description{
+  height:30%;
+}
   
  .card .Activecard {
     opacity:0;
@@ -84,7 +93,8 @@
   }
 .card .Activecard .image{
     width:100%;
-
+    position: absolute;
+    z-index: -1;
     height:50%;
     border-radius: 13px;
 
@@ -104,10 +114,16 @@
 
 }
 .card .Activecard .card-buttons{
+    position: relative;
+    top:10vh;
     margin-top: 2vh;
     
+    background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27,0.9),
+  
+    rgb(18, 19, 27,.3),
+    rgb(18, 19, 27,.1));
     display:block;
-    height: 7vh;
+    height: 11vh;
 }
  .card .Activecard .image  img{
     height:100%;
@@ -119,9 +135,13 @@
 }
 
 .card .Activecard .card-description .category{
-    font-size: 13px;
+    position: relative;
+    top:14vh;
+    font-size: 12px;
 }
 .card .Activecard .card-description .title{
+    position: relative;
+    top:16vh;
     font-size: 11px;
     color: rgb(148, 148, 178);
 }
@@ -131,6 +151,7 @@
 
 .card .card-buttons .watch-now {
     margin-left: 1vb;
+    margin-top:7vh;
     border: 1px solid rgba(190, 187, 182, 0.1);
     border-radius: 10px;
     padding: 1.4vh 7vb; 
@@ -139,7 +160,7 @@
     font-size: 12px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    transition: all .2s ease;
+    transition: transform .2s ease;
 }
 
 .card .card-buttons .watch-now:hover {
@@ -147,6 +168,7 @@
 }
 
 .card .card-buttons .add {
+  margin-top:4vh;
     border: 1px solid rgba(190, 187, 182, 0.1);
     border-radius: 10px;
     padding:  .9vh 1.5vb;

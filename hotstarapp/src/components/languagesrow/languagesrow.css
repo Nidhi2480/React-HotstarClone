@@ -1,0 +1,84 @@
+.languages-row{
+    position: relative;
+    margin-left:19vb;
+    margin-right:5vb;
+    margin-bottom:5vh;
+
+}
+.language-items{
+    position: relative;
+    width:34vb !important;
+    height: 18vh;
+    margin-right:2vb;
+    background-color: rgb(35, 35, 46);
+    border-radius: 5px;
+    transition: transform .5s ease;
+    z-index: 1;
+}
+.language-items img{
+   
+    width:100%;
+    height:100%;
+    object-fit: fill;
+}
+
+.language-items:hover{
+    transform: scale(1.2);
+    z-index: 3;
+}
+.slick-list {
+    overflow: hidden;
+    position: relative;  
+    padding: 15px 15px; 
+  }
+  
+
+  
+ 
+  .scroll-right {
+    position: absolute;
+    top:0;
+    right: 0;
+    background: linear-gradient(to left,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    height:100%;
+    width: 7%;
+    z-index: 2;
+    transition: all .2s ease;
+  }
+  .scroll-left{
+    position: absolute;
+    left: 0;
+    background: linear-gradient(to right,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    height:100%;
+    width: 7%;
+    z-index: 2;
+    transition: all .2s ease;
+  }
+
+
+  .arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }

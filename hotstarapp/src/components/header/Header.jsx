@@ -2,10 +2,9 @@ import React,{useEffect} from "react"
 import { useParams } from "react-router-dom";
 import Trailer from "../banner/Trailer"
 import TrailerDesc from "../bannerdesc/TrailerDesc";
-import Trailervid from '../../media/starwars.mp4';
 
 
-function Header({changeBanner,isBanner}){
+function Header({changeBanner,movie}){
     
     const { id } = useParams();
     useEffect(() => {
@@ -33,8 +32,8 @@ function Header({changeBanner,isBanner}){
    
     return (
         <>
-        <Trailer trailer={Trailervid} banner={isBanner}/> 
-        <TrailerDesc changebanner={changeBanner} />   
+        <Trailer movie={movie}/> 
+        <TrailerDesc changebanner={changeBanner} movie={movie}/>   
         </>
 
     )
