@@ -6,7 +6,7 @@ import TrailerDesc from "../bannerdesc/TrailerDesc";
 
 function Header({changeBanner,movie}){
     
-    const { id } = useParams();
+   /* const { id } = useParams();
     useEffect(() => {
         const fetchMovie = async () => {
             try {
@@ -26,7 +26,7 @@ function Header({changeBanner,movie}){
         if (id) {
             fetchMovie();
         }
-    }, [id]);
+    }, [id]);*/
 
 
    

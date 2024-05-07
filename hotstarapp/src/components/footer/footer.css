@@ -12,14 +12,15 @@
     z-index: 1;
 }
 .firstgridrow{
-    margin-top:10vh;
+    margin-top:16vh;
     margin-left:19vb;
     margin-bottom:5vh;
-    font-weight: bold;
+
+    font-size: 16px;
 }
 
 .footerlastrow{
-    margin-top: 5vh;
+    margin-top: 6vh;
     margin-left:19vb;
     color: rgb(148, 148, 178);
     font-size: 14px;
@@ -27,6 +28,7 @@
 .footer-item {
     color: rgb(148, 148, 178);
     margin-left:19vb;
+    font-size: 14px;
   }
 .icons{
     display:flex;

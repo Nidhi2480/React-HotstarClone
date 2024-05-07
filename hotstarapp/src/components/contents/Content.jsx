@@ -1,30 +1,24 @@
-import React,{useState} from "react"
+import React from "react"
 import Row from "../movielistrow/Row"
 import Header from "../header/Header"
 import Companies from "../companiesrow/Companies";
-import MoviesData from '../../moviedata/Moviesdata';
-import './contents.css';
 import Languagesrow from "../languagesrow/Languagesrow";
+import './contents.css';
 
-function Content(){
-    const [ismovie,setBanner]=useState(MoviesData[0])
-    const changeBanner=(url)=>
-       {
-           setBanner(url)
-       }
+function Content({changeBanner,isbanner}){
     return (
      
         <div className="banner">
-            <Header changeBanner={changeBanner} movie={ismovie}/>
+            <Header changeBanner={changeBanner} movie={isbanner}/>
             <div className="shadow"></div>
             <div className="rows" >
-                <Row rowName="Latest Shows" apiUrl="https://api.sampleapis.com/movies/family"  smallRow={false}  changeBanner={changeBanner}/>
+                <Row rowName="Latest Shows" apiUrl=""  smallRow={false}  changeBanner={changeBanner}/>
+                <Row rowName="Family" apiUrl="https://api.sampleapis.com/movies/family"  smallRow={false}  changeBanner={changeBanner} genre="family"/>
                 <Companies />
-                <Row rowName="Western" apiUrl="https://api.sampleapis.com/movies/western" smallRow={true}  changeBanner={changeBanner}/>
-                
-                <Row rowName="Classic" apiUrl="https://api.sampleapis.com/movies/classic" smallRow={false}  changeBanner={changeBanner}/>
+                <Row rowName="Western" apiUrl="https://api.sampleapis.com/movies/western" smallRow={true}  changeBanner={changeBanner} genre="western"/>
+                <Row rowName="Classic" apiUrl="https://api.sampleapis.com/movies/classic" smallRow={false}  changeBanner={changeBanner} genre="classic"/>
                 <Languagesrow/>
-                <Row rowName="Drama" apiUrl="https://api.sampleapis.com/movies/drama" smallRow={false}  changeBanner={changeBanner}/>
+                <Row rowName="Drama" apiUrl="https://api.sampleapis.com/movies/drama" smallRow={false}  changeBanner={changeBanner} genre="drama"/>
             </div>
             
     </div>

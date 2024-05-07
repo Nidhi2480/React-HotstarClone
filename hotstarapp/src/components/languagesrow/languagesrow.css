@@ -1,7 +1,7 @@
 .languages-row{
-    position: relative;
+    width:90.5%;
     margin-left:19vb;
-    margin-right:5vb;
+    margin-right:6vb;
     margin-bottom:5vh;
 
 }
@@ -12,18 +12,19 @@
     margin-right:2vb;
     background-color: rgb(35, 35, 46);
     border-radius: 5px;
-    transition: transform .5s ease;
+    transition: transform .2s ease;
     z-index: 1;
 }
 .language-items img{
-   
+
     width:100%;
     height:100%;
     object-fit: fill;
+    border-radius: 5px;
 }
 
 .language-items:hover{
-    transform: scale(1.2);
+    transform: scale(1.12);
     z-index: 3;
 }
 .slick-list {

@@ -1,14 +1,11 @@
 .card {
-
-    height:33vh;
+    height:35vh;
     width: 25vb;
-   
+    transition: all 0.05s ease;
     color: rgb(247, 247, 247);
-
     margin-right: 1.5vb;
     flex-shrink: 0;
     padding: 0;
-    transition: all 0.3s ease;
     cursor: pointer;
   }
   
@@ -48,9 +45,9 @@
     position: absolute;
     top:0;
     transition: all 0.5s ease;
-    transition-delay: .5s;
-    height: 220px;
-    width: 250px;
+
+    height: 35vh;
+    width: 45vb;
     background-color: rgb(18, 19, 27);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
     border-radius: 7px;
@@ -58,10 +55,14 @@
   
   }
   .card.small .Activecard .image{
+    position: relative;
     width:100%;
     height:70%;
     border-radius: 13px;
 
+}
+.card.small .Activecard .logo{
+  display: none;
 }
 .card.small .Activecard .card-buttons{
   display: none;
@@ -70,27 +71,47 @@
   height:30%;
 }
   
+.card.small .Activecard .card-description .category{
+  position: relative;
+  top:0;
+}
+.card.small .Activecard .card-description .title{
+  position: relative;
+  top:0;
+}
+
+
+
  .card .Activecard {
     opacity:0;
     position: absolute;
     top:0;
-    transition: all 0.5s ease;
-    transition-delay: .5s;
-    height: 45vh;
+    transition: all .5s ease;
+    height: 44vh;
     width: 35vb;
     background-color: rgb(18, 19, 27);
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75),
+    10px 0 20px -5px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
+
+
 
   
   }
-
+  .card:hover {
+    transform: scale(1.05);
+  }
   .card:hover .Activecard {
-    transform: scale(1.2);
+   
     opacity: 1;
-    z-index: 3;
+    z-index: 5;
+    transform: translateY(-7px);
 
   }
+  .card:hover .Activecard:hover {
+    transform: scale(1.1); 
+  }
+
 .card .Activecard .image{
     width:100%;
     position: absolute;
@@ -108,16 +129,28 @@
 }
 
 .card .Activecard .card-description{
- 
+
     display:block;
     height: 10vh;
 
 }
+.card .Activecard .logo{
+  position: relative;
+  top:9vh;
+  left:0;
+  width:50%;
+  height:8vh;
+}
+.card .Activecard .logo img{
+  position: relative;
+  left:0;
+  height:100%;
+  width:100%;
+}
 .card .Activecard .card-buttons{
     position: relative;
-    top:10vh;
-    margin-top: 2vh;
-    
+    top:3vh;
+
     background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27,0.9),
   
     rgb(18, 19, 27,.3),
@@ -136,16 +169,33 @@
 
 .card .Activecard .card-description .category{
     position: relative;
-    top:14vh;
-    font-size: 12px;
+    top:5vh;
+    font-size: 11px;
 }
 .card .Activecard .card-description .title{
-    position: relative;
-    top:16vh;
+  position: relative;
+  top:6vh;
     font-size: 11px;
     color: rgb(148, 148, 178);
 }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

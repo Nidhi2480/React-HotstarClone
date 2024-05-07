@@ -1,48 +1,39 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../card/Card';
-
+import MoviesData from '../../moviedata/Moviesdata';
 import './rowstyle.css';
 
-export default function App({ rowName, apiUrl, smallRow }) {
+export default function App({ rowName, apiUrl, smallRow,genre}) {
   const [data, setData] = useState([]);
-  const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(6); 
-  const [isCardHovered, setCardHovered] = useState(false);
-  const [isNavHovered, setNavHovered] = useState(false);
+  const [isNavHovered, setNavHovered] = useState(true);
+  const [changeClass, setChangeClass] = useState(false);
   const rowContentRef = useRef(null);
-
+  function cardHover(){
+    setChangeClass(true)
+    setNavHovered(false)
+  }
+  function NocardHover(){
+    setChangeClass(false)
+    setNavHovered(true)
+  }
   useEffect(() => {
     const getData = async () => {
       try {
-        const resp = await fetch(apiUrl);
-        const json = await resp.json();
-        setData(json);
+        if (apiUrl) {
+          const resp = await fetch(apiUrl);
+          const json = await resp.json();
+          setData(json);
+        } else {
+          setData(MoviesData);
+        }
       } catch (error) {
         console.error('Error fetching movie data:', error);
       }
     };
     getData();
   }, [apiUrl]);
-
-  const handleMouseEnter = (id) => {
-    setCardHovered(true);
-    setHoveredCardIndex(id);
-    console.log(id)
-  };
-
-  const handleMouseLeave = () => {
-    setCardHovered(false);
-    setHoveredCardIndex(null);
-  };
-
-  const handleNavMouseEnter = () => {
-    setNavHovered(true);
-  };
-
-  const handleNavMouseLeave = () => {
-    setNavHovered(false);
-  };
 
   const handleScrollRight = () => {
     if (endIndex < data.length - 1) {
@@ -61,16 +52,15 @@ export default function App({ rowName, apiUrl, smallRow }) {
   return (
     <>
       <h2 style={{ color: 'white', marginLeft: `19vb`, fontSize: `20px`, fontWeight: `bold` }}>{rowName}</h2>
-      <div className="row-movies" onMouseEnter={handleNavMouseEnter} onMouseLeave={handleNavMouseLeave}>
-        <div className={`row-contents${isCardHovered ? ' hide-x' : ''}`}  ref={rowContentRef}>
-          {data.slice(startIndex, endIndex + 1).map((movie, index) => (
+      <div className="row-movies">
+        <div className={`row-contents ${changeClass?` x-hide `:``}`}  ref={rowContentRef}>
+          {data.slice(startIndex, endIndex + 1).map((movie, _) => (
             <Card
-              key={index}
               movie={movie}
               smallRow={smallRow}
-              onMouseEnter={() => handleMouseEnter(movie.id)}
-              onMouseLeave={handleMouseLeave}
-              isHovered={movie.id === hoveredCardIndex}
+              cardHover={cardHover}
+              NocardHover={NocardHover}
+              genre={genre}
             />
           ))}
         </div>

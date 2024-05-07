@@ -8,6 +8,7 @@ import './footer.css';
 
 function Footer() {
   return (
+
     <div className='footer'>
       <FooterItem gridColumn='1 / 2' gridRow='1 / 2' classname="firstgridrow">Company</FooterItem>
       <FooterItem gridColumn='1 / 2' gridRow='2 / 3'  classname="footer-item">About Us</FooterItem>
@@ -32,6 +33,7 @@ function Footer() {
        
       </FooterItem>
     </div>
+    
   );
 }
 

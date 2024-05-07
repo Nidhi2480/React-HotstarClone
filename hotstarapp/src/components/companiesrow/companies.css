@@ -1,17 +1,20 @@
 .companies-row{
+    position: relative;
     display:flex;
     margin-left:19vb;
     margin-bottom:5vh;
+    z-index: 1;
 }
 .item{
     padding: 0;
-   position: relative;
+   position: inherit;
     width:27vb;
     height: 15vh;
     margin-right:2vb;
     background-color: rgb(35, 35, 46);
     border-radius: 5px;
     transition: transform .3s ease;
+ 
 }
 .item img{
     position: absolute;
@@ -31,7 +34,8 @@
     transition: transform .3s ease;
 }
 .item:hover{
-    transform: scale(1.1);
+    transform: scale(1.15);
+    z-index: 1;
 }
 .item:hover video{
 

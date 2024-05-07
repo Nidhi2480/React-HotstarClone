@@ -12,7 +12,7 @@ function Sideimages({ changeBanner }) {
       const { onClick } = props;
       return (
         <button
-          className={`scroll-left`}
+          className={`side-scroll-left`}
         
           onClick={onClick}
         >
@@ -25,7 +25,7 @@ function Sideimages({ changeBanner }) {
       const { onClick } = props;
       return (
         <button
-          className={`scroll-right`}
+          className={`side-scroll-right`}
   
           onClick={onClick}
         >

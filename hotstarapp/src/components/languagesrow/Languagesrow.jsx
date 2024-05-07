@@ -44,6 +44,7 @@ function Languagesrow() {
 
   return (
     <div className="languages-row">
+      <h2 style={{ color: 'white', fontSize: `19px`,fontWeight: `1400` }}>Popular Languages</h2>
       <Slider {...settings}>
         {Languages.images.map((imagesrc, index) => (
           <div className="language-items" key={index}>
