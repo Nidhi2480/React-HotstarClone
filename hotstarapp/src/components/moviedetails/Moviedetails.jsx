@@ -4,10 +4,11 @@ import MoviesData from '../../moviedata/Moviesdata';
 import Header from '../header/Header'
 import Details from './Details'
 function Moviedetails({changeBanner,isbanner}){
+
     const params = useParams();
     const id=params.id
     const genre=params.genre
-    console.log(params)
+  
     useEffect(() => {
         const fetchMovie = async () => {
             try {
@@ -35,12 +36,12 @@ function Moviedetails({changeBanner,isbanner}){
         if (id) {
             fetchMovie();
         }
-    }, [changeBanner,id]);
+    }, [changeBanner,id,genre]);
 
   
     return(<>
         <Header changeBanner={changeBanner} movie={isbanner}/>
-        <Details /></>
+        <Details genre={genre}/></>
     )
 }
 

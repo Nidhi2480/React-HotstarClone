@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Card from '../card/Card';
 import "./details.css";
 
 function Details({ genre }) {
+  console.log(genre)
   const [data, setData] = useState([]);
-
   useEffect(() => {
     const fetchMovie = async () => {
       try {
@@ -30,8 +31,18 @@ function Details({ genre }) {
       <div className="headings">
         <h1>Movies Like This</h1>
         <h1>Trailers & More</h1>
+
       </div>
       <hr />
+      <div className="container">
+          {data.slice(0,9).map((movie,_)=>(
+            <Card
+            movie={movie}
+            genre={genre}
+          />
+          ))}
+        
+      </div>
     </div>
   );
 }

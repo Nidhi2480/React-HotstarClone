@@ -7,12 +7,17 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
   console.log(genre)
   const handleMouseEnter = () => {
     setHovered(true);
-    cardHover();
+    if (cardHover){
+      cardHover();
+    }
+   
   };
 
   const handleMouseLeave = () => {
     setHovered(false);
-    NocardHover(); 
+    if (NocardHover){
+      NocardHover();
+    }
   };
   return (
    
@@ -37,7 +42,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
                <div className="logo"><img src={movie.posterURL?'./icons/hotstarsp.png':movie.logo} alt='logo'/></div>
                <div className="card-buttons">
                  <button className="watch-now">
-                 <Link to={`/movies/${movie.id}/${genre}?`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>
+                 <Link to={`/movies/${movie.id}/${movie.posterURL?genre:'drama'}?`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>
                  </button>
                  <button className="add"> + </button>
                </div>
