@@ -1,17 +1,21 @@
-import React from "react"
+import React,{useState} from "react"
 import Trailer from "../banner/Trailer"
 import TrailerDesc from "../bannerdesc/TrailerDesc";
 
 
 function Header({changeBanner,movie}){
-    
+    const [isMuted, setIsMuted] = useState(false);
+
+    const handleUnmuteClick = () => {
+      setIsMuted(false);
+    };
    
 
    
     return (
         <>
-         <Trailer movie={movie}/> 
-        <TrailerDesc changebanner={changeBanner} movie={movie}/>   
+        <Trailer movie={movie} isMuted={isMuted}/> 
+        <TrailerDesc changebanner={changeBanner} movie={movie} handleUnmuteClick={handleUnmuteClick}/>   
         </>
 
     )

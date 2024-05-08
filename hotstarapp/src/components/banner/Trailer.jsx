@@ -1,7 +1,7 @@
 import React, { useEffect, useRef,useState } from 'react';
 import {Banner} from '../../moviedata/Moviesdata'
 import './trailer.css';
-function Trailer({movie}) {
+function Trailer({movie,isMuted}) {
   const [showVideo, setShowVideo] = useState(false);
   const videoRef = useRef(null);
 
@@ -45,7 +45,7 @@ function Trailer({movie}) {
 
   return (<>
   {(movie.trailerLink || movie.posterURL) && showVideo &&(<div className="movie-trailer">
-  <video ref={videoRef} autoPlay loop>
+  <video ref={videoRef} autoPlay muted={isMuted} loop>
     <source src={movie.posterURL?Banner.video:movie.trailerLink} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

@@ -2,7 +2,7 @@ import React from 'react'
 import Sideimages from '../bannersideimg/Sideimages';
 import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
-function TrailerDesc({changebanner,movie}) {
+function TrailerDesc({changebanner,movie,handleUnmuteClick}) {
 
 
   return (
@@ -16,7 +16,7 @@ function TrailerDesc({changebanner,movie}) {
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>
-        <img src={unMute} alt="volume"/>
+        <img src={unMute} alt="volume"  onClick={handleUnmuteClick} />
     </div>
     <div className="row1">
 
