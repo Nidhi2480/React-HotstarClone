@@ -1,6 +1,5 @@
 import React from 'react'
 import Sideimages from '../bannersideimg/Sideimages';
-import movielogo from '../../media/starwars.webp'
 import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
 function TrailerDesc({changebanner,movie}) {
