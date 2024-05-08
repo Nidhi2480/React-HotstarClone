@@ -8,7 +8,7 @@ function Moviedetails({changeBanner,isbanner}){
     const params = useParams();
     const id=params.id
     const genre=params.genre
-  
+    
     useEffect(() => {
         const fetchMovie = async () => {
             try {
@@ -36,7 +36,7 @@ function Moviedetails({changeBanner,isbanner}){
         if (id) {
             fetchMovie();
         }
-    }, [genre,id]);
+    }, [genre,id,changeBanner]);
 
   
     return(

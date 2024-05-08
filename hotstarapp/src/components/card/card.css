@@ -1,9 +1,9 @@
 .card {
     height:35vh;
-    width: 25vb;
+    width: 25vw;
     transition: all 0.05s ease;
     color: rgb(247, 247, 247);
-    margin-right: 1.5vb;
+    margin-right: .8%;
     
     padding: 0;
     cursor: pointer;
@@ -30,7 +30,7 @@
 
   .card.small {
     height:26vh;
-    width:33vb;
+    width:18vw;
     flex-shrink: 0;
   }
   .card.small .title1{
@@ -48,7 +48,7 @@
     transition: all 0.5s ease;
     overflow: hidden;
     height: 35vh;
-    width: 45vb;
+    width: 23vw;
     background-color: rgb(18, 19, 27);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
     border-radius: 7px;
@@ -89,7 +89,7 @@
     top:0;
     transition: all .8s ease;
     height: 44vh;
-    width: 35vb;
+    width: 18vw;
     overflow: hidden;
     background-color: rgb(18, 19, 27);
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75),
@@ -139,6 +139,7 @@
 }
 .card .Activecard .logo{
   position: relative;
+  display: flex;
   top:9vh;
   left:0;
   width:100%;
@@ -203,11 +204,11 @@
 
 
 .card .card-buttons .watch-now {
-    margin-left: 1vb;
+    margin-left: 1vw;
     margin-top:7vh;
     border: 1px solid rgba(190, 187, 182, 0.1);
     border-radius: 10px;
-    padding: 1.4vh 7vb; 
+    padding: 1.4vh 15%; 
     cursor: pointer;
 
     font-size: 12px;
@@ -224,14 +225,14 @@
   margin-top:4vh;
     border: 1px solid rgba(190, 187, 182, 0.1);
     border-radius: 10px;
-    padding:  .9vh 1.5vb;
+    padding:  .9vh 7%;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
     background-color: rgba(54, 51, 51, 0.5);
     color: rgb(255, 255, 255);
     transition: all .2s ease;
-    margin-left: 1vb;
+    margin-left: 1vw;
 }
 
 .card .card-buttons .add:hover {

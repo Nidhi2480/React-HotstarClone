@@ -55,7 +55,7 @@
   position: absolute;
   top:3vh;
   left:0;
-  width:2vb;
+  width:2vw;
   background: linear-gradient(to right,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
   color: rgb(255, 255, 255);
   border: none;

@@ -1,6 +1,7 @@
 import React,{useState} from "react";
-import "./card.css";
 import { Link } from "react-router-dom";
+import "./card.css";
+
 
 function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
   const [iscardHovered,setHovered]=useState(true)
@@ -40,7 +41,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
                   Your browser does not support the video tag.
                 </video> */}
              </div>
-               <div className="logo"><img src={movie.posterURL?'./icons/hotstarsp.png':movie.logo} alt='logo'/></div>
+               <div className="logo"><img src={movie.posterURL?'./icons/hotstarsp.png':movie.logo} alt='logo'/><img src={'./icons/star.svg'} alt='logo'/></div>
                <div className="card-buttons">
                  <button className="watch-now">
                  <Link to={`/movies/${movie.id}/${movie.posterURL?genre:''}?`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>

@@ -3,6 +3,7 @@ import Card from '../card/Card';
 import "./details.css";
 
 function Details({ genre }) {
+  
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchMovie = async () => {

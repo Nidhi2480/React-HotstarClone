@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState ,useCallback} from 'react'; 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/sidebar/Nav';
 import Content from './components/contents/Content';
@@ -9,11 +9,11 @@ import './App.css';
 
 function App() {
  
-  const [ismovie,setBanner]=useState(MoviesData[0])
-    const changeBanner=(movie)=>
-       {
-           setBanner(movie)
-       }
+  const [ismovie, setBanner] = useState(MoviesData[0]);
+
+  const changeBanner = useCallback((movie) => {
+    setBanner(movie);
+  }, []);
   return (
     <Router>
       <div className="App">
