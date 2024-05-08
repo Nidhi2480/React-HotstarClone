@@ -19,8 +19,8 @@ function App() {
       <div className="App">
         <Nav />
         <Routes>
-          <Route path="/" exact element={<Content changeBanner={changeBanner} isbanner={ismovie} />} />
-          <Route path="/movies/:id/:genre?" exact element={<Moviedetails changeBanner={changeBanner} isbanner={ismovie}/>} />
+          <Route exact path="/"  element={<Content changeBanner={changeBanner} isbanner={ismovie} />} />
+          <Route exact path="/movies/:id/:genre?"  element={<Moviedetails changeBanner={changeBanner} isbanner={ismovie}/>} />
         </Routes>
         <Footer />
       </div>

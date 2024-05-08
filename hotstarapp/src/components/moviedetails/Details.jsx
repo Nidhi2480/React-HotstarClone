@@ -35,7 +35,7 @@ function Details({ genre }) {
       </div>
       <hr />
       <div className="container">
-          {data.slice(0,9).map((movie,_)=>(
+          {data.slice(0,7).map((movie,_)=>(
             <Card
             movie={movie}
             genre={genre}

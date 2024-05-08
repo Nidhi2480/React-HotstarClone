@@ -16,11 +16,11 @@ function Moviedetails({changeBanner,isbanner}){
                 if (response.ok) {
                     const data = await response.json();
                     if (data.posterURL){
-                        console.log(data.posterURL);
+                        changeBanner(data);
                     }else{
                         const selectedMovie = MoviesData.find(movie => movie.id === parseInt(id));
                         if(selectedMovie){   
-                            changeBanner(selectedMovie)
+                            changeBanner(selectedMovie);
                         }
                      
                     }
@@ -39,9 +39,12 @@ function Moviedetails({changeBanner,isbanner}){
     }, [changeBanner,id,genre]);
 
   
-    return(<>
+    return(
+    <div className="detailed-view">
         <Header changeBanner={changeBanner} movie={isbanner}/>
-        <Details genre={genre}/></>
+        <div className="shadow"></div>
+        <Details genre={genre}/>
+    </div>
     )
 }
 

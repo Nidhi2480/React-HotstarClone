@@ -1,5 +1,4 @@
 import React, { useEffect, useRef,useState } from 'react';
-
 import './trailer.css';
 
 function Trailer({movie}) {
@@ -45,15 +44,15 @@ function Trailer({movie}) {
 
 
   return (<>
-  {movie.trailerLink && showVideo &&(<div className="movie-trailer">
-  <video ref={videoRef} autoPlay muted loop>
+  {(movie.trailerLink || movie.posterURL) && showVideo &&(<div className="movie-trailer">
+  <video ref={videoRef} autoPlay loop>
     <source src={movie.trailerLink} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>)}
-  {movie.poster && !showVideo &&(<div className="movie-trailer">
+  {(movie.poster || movie.posterURL) && !showVideo &&(<div className="movie-trailer">
 
-    <img src={movie.poster} alt={movie.poster}/>
+    <img src={movie.posterURL?movie.posterURL:movie.poster} alt={movie.poster}/>
     </div>)}
     </>
     
