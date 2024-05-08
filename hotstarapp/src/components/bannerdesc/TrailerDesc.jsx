@@ -3,7 +3,9 @@ import Sideimages from '../bannersideimg/Sideimages';
 import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
 function TrailerDesc({changebanner,movie,handleUnmuteClick}) {
-
+    function handleClick(){
+        handleUnmuteClick()
+    }
 
   return (
     <div className="information">
@@ -16,7 +18,7 @@ function TrailerDesc({changebanner,movie,handleUnmuteClick}) {
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>
-        <img src={unMute} alt="volume"  onClick={handleUnmuteClick()} />
+        <img src={unMute} alt="volume"  onClick={handleClick()} />
     </div>
     <div className="row1">
 

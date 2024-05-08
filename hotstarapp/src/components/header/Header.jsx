@@ -7,7 +7,7 @@ function Header({changeBanner,movie}){
     const [isMuted, setIsMuted] = useState(false);
 
     const handleUnmuteClick = () => {
-      setIsMuted(false);
+      setIsMuted(!isMuted);
     };
    
 
