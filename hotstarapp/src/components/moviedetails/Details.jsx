@@ -22,7 +22,7 @@ function Details({ genre }) {
     if (genre) {
       fetchMovie();
     }
-  }, []);
+  }, [genre]);
 
   return (
     <div className="movie-details">
