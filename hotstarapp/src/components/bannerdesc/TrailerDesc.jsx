@@ -2,7 +2,7 @@ import React from 'react'
 import Sideimages from '../bannersideimg/Sideimages';
 import unMute from '../../media/icons/unmute.svg';
 import './trailerdesc.css';
-function TrailerDesc({changebanner,movie,handleUnmuteClick}) {
+function TrailerDesc({changebanner,movie,handleUnmuteClick,isMuted}) {
     function handleClick(){
         handleUnmuteClick()
     }
@@ -18,7 +18,7 @@ function TrailerDesc({changebanner,movie,handleUnmuteClick}) {
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>
-        <img src={unMute} alt="volume"  onClick={handleClick} />
+        {isMuted?<img src='icons/volumeup.svg' alt="volume"  onClick={handleClick} />:<img src={unMute} alt="volume"  onClick={handleClick} />}
     </div>
     <div className="row1">
 

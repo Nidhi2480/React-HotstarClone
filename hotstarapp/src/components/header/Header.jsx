@@ -15,7 +15,7 @@ function Header({changeBanner,movie}){
     return (
         <>
         <Trailer movie={movie} isMuted={isMuted}/> 
-        <TrailerDesc changebanner={changeBanner} movie={movie} handleUnmuteClick={handleUnmuteClick}/>   
+        <TrailerDesc changebanner={changeBanner} movie={movie} handleUnmuteClick={handleUnmuteClick} isMuted={isMuted}/>   
         </>
 
     )
