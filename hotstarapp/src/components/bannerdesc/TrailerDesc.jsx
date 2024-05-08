@@ -23,7 +23,7 @@ function TrailerDesc({changebanner,movie}) {
         <div className="buttons">
             <button className='subscribe'><span className="triangle"></span> Subscribe to Watch</button>
             <button className='add'> + </button></div>
-            <Sideimages changeBanner={changebanner}/>
+            {!movie.posterURL && <Sideimages changeBanner={changebanner}/>}
         
         
     </div>

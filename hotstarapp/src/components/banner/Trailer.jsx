@@ -1,6 +1,6 @@
 import React, { useEffect, useRef,useState } from 'react';
+import {Banner} from '../../moviedata/Moviesdata'
 import './trailer.css';
-
 function Trailer({movie}) {
   const [showVideo, setShowVideo] = useState(false);
   const videoRef = useRef(null);
@@ -46,13 +46,13 @@ function Trailer({movie}) {
   return (<>
   {(movie.trailerLink || movie.posterURL) && showVideo &&(<div className="movie-trailer">
   <video ref={videoRef} autoPlay loop>
-    <source src={movie.trailerLink} type="video/mp4" />
+    <source src={movie.posterURL?Banner.video:movie.trailerLink} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>)}
   {(movie.poster || movie.posterURL) && !showVideo &&(<div className="movie-trailer">
 
-    <img src={movie.posterURL?movie.posterURL:movie.poster} alt={movie.poster}/>
+    <img src={movie.posterURL?Banner.poster:movie.poster} alt={movie.poster}/>
     </div>)}
     </>
     

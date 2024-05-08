@@ -31,7 +31,7 @@ function Nav(){
                 {
                     NavData.map((nav,index)=>(
                         <li>
-                        <a href="/#" className={`nav-link ${activeNav === nav.name ? 'active' : ''}`}>
+                        <a href="/" className={`nav-link ${activeNav === nav.name ? 'active' : ''}`}>
                             <img src={nav.icon} alt="profile"  onMouseEnter={() => handleHover(nav.name)} onMouseLeave={handleLeave}/>
                             {isHovered && (
                                 <span className={`nav-text ${activeNav === nav.name ? 'active' : ''}`}>{nav.name}</span>

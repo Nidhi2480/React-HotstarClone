@@ -3,7 +3,6 @@ import Card from '../card/Card';
 import "./details.css";
 
 function Details({ genre }) {
-  console.log(genre)
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchMovie = async () => {
@@ -11,7 +10,6 @@ function Details({ genre }) {
         const resp = await fetch(`https://api.sampleapis.com/movies/${genre}`);
         if (resp.ok) {
           const json = await resp.json();
-          console.log(json)
           setData(json);
         } else {
           throw new Error("Failed to fetch movie");
@@ -24,7 +22,7 @@ function Details({ genre }) {
     if (genre) {
       fetchMovie();
     }
-  }, [genre]);
+  }, []);
 
   return (
     <div className="movie-details">

@@ -119,4 +119,13 @@ const MoviesData = [
       
 
 ];
+
+
+export const Banner={
+  poster:"/default.jpg",
+  video:"/videos/compilation.mp4"
+} 
+
+
+
 export default MoviesData;

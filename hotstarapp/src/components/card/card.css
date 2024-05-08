@@ -141,14 +141,14 @@
   position: relative;
   top:9vh;
   left:0;
-  width:50%;
+  width:100%;
   height:8vh;
 }
 .card .Activecard .logo img{
   position: relative;
   left:0;
   height:100%;
-  width:100%;
+  width:50%;
 }
 .card .Activecard .card-buttons{
     position: relative;

@@ -25,7 +25,8 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
       key={movie.id}
       className={`card ${smallRow ? "small" : ""}`}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
+      onMouseLeave={handleMouseLeave}
+      >
       <div className="image">
         <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
       </div>

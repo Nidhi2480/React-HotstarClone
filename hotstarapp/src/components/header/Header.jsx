@@ -10,7 +10,7 @@ function Header({changeBanner,movie}){
    
     return (
         <>
-        <Trailer movie={movie}/> 
+         <Trailer movie={movie}/> 
         <TrailerDesc changebanner={changeBanner} movie={movie}/>   
         </>
 

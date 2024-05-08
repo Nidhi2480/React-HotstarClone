@@ -36,7 +36,7 @@ function Moviedetails({changeBanner,isbanner}){
         if (id) {
             fetchMovie();
         }
-    }, [changeBanner,id,genre]);
+    }, [genre,id]);
 
   
     return(
