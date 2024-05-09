@@ -12,7 +12,7 @@ function Content({changeBanner,isbanner}){
             <Header changeBanner={changeBanner} movie={isbanner}/>
             <div className="shadow"></div>
             <div className="rows" >
-                <Row rowName="Latest Shows" apiUrl=""  smallRow={false}  changeBanner={changeBanner}/>
+                <Row rowName="Latest Shows" apiUrl=""  smallRow={false}  changeBanner={changeBanner} genre="latestshows"/>
                 <Row rowName="Family" apiUrl="https://api.sampleapis.com/movies/family"  smallRow={false}  changeBanner={changeBanner} genre="family"/>
                 <Companies />
                 <Row rowName="Western" apiUrl="https://api.sampleapis.com/movies/western" smallRow={true}  changeBanner={changeBanner} genre="western"/>

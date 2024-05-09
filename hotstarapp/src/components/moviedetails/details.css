@@ -12,6 +12,24 @@
   height:25vh;
   width:100%;
 }
+.detailed-view .rows{
+  position:relative;
+
+  background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27),
+  rgb(18, 19, 27,.9),
+  rgb(18, 19, 27,.8),
+  rgb(18, 19, 27,.7));
+  z-index:2 ;
+
+  width:100%;
+}
 
 .detailed-view .movie-details{
     position:relative;
@@ -45,6 +63,8 @@
   }
   .detailed-view .movie-details .container{
   display:flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding:10vh 15vh;
+  width:100%;
+  height:90%
 }

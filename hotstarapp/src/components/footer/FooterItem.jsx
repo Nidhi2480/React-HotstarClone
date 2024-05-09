@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.css'; // Import CSS file for FooterItem styling
+import './footer.css';
 
 function FooterItem({ gridColumn, gridRow, children,classname }) {
   const style = {

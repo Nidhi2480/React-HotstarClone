@@ -14,7 +14,7 @@
     min-height:150px;
     min-width: 90px;
     z-index: 4;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .nav-bar ul {
     list-style: none;
@@ -41,7 +41,7 @@
     transition: transform 0.3s ease;
 }
 .nav-bar ul li img {
-    width:22px;
+    width:18px;
     transition: transform 0.3s ease-out;
 }
 .nav-bar .nav-link.active img {
@@ -85,3 +85,18 @@
     font-weight: bold;
 }
 
+.modal {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: normal;
+    height:80%;
+    width:80%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color:rgba(0, 0, 0, 0.7);
+    z-index: 4;
+}

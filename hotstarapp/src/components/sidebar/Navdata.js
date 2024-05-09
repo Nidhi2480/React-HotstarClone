@@ -28,5 +28,9 @@ const NavData=[
         name:'Categories',
         icon:'/icons/category.svg'
     },
+    {
+        name:'Favourites',
+        icon:'/icons/navstar.svg'
+    },
 ]
 export default NavData;

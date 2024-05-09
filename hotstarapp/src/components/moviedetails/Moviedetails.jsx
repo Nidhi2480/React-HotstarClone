@@ -1,14 +1,15 @@
 import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
+import Row from "../movielistrow/Row"
 import MoviesData from '../../moviedata/Moviesdata';
 import Header from '../header/Header'
-import Details from './Details'
+import './details.css'
 function Moviedetails({changeBanner,isbanner}){
 
     const params = useParams();
     const id=params.id
-    const genre=params.genre
-    
+    let genre=params.genre
+   
     useEffect(() => {
         const fetchMovie = async () => {
             try {
@@ -37,13 +38,16 @@ function Moviedetails({changeBanner,isbanner}){
             fetchMovie();
         }
     }, [genre,id,changeBanner]);
-
+    
   
     return(
     <div className="detailed-view">
         <Header changeBanner={changeBanner} movie={isbanner}/>
         <div className="shadow"></div>
-        <Details genre={genre}/>
+        <div className="rows" >
+      
+        <Row rowName="Movies Like This" apiUrl={`https://api.sampleapis.com/movies/${genre==='latestshows'?'drama':genre}`} smallRow={false}  changeBanner={changeBanner} genre={genre}/>
+        </div>
     </div>
     )
 }

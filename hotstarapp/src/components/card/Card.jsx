@@ -1,11 +1,13 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
+import { Context } from '../../App'
 import { Link } from "react-router-dom";
 import "./card.css";
+import FindFavMovies from "./FindFavMovies";
 
 
 function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
+  const [setCount,,setFavMoviesArray,FavMovies]=useContext(Context);
   const [iscardHovered,setHovered]=useState(true)
-  console.log(genre)
   const handleMouseEnter = () => {
     setHovered(true);
     if (cardHover){
@@ -20,6 +22,12 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
       NocardHover();
     }
   };
+
+  const handleClick=(id,genre,movie)=>{
+    setFavMoviesArray(id,genre,movie)
+    setCount()
+  }
+
   return (
    
     <div
@@ -32,21 +40,23 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
         <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
       </div>
       <p className="title1">{movie.title}</p>
-      {iscardHovered && (
-             <div className="Activecard">
+      {iscardHovered && (<div className="Activecard">
              <div className="image">
                <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
-               
+    
                {/* <video><source src={trailer} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video> */}
              </div>
-               <div className="logo"><img src={movie.posterURL?'./icons/hotstarsp.png':movie.logo} alt='logo'/><img src={'./icons/star.svg'} alt='logo'/></div>
+               <div className="logo"><img src={movie.posterURL?'./icons/hotstarsp.png':movie.logo} alt='logo'/>      </div>
                <div className="card-buttons">
                  <button className="watch-now">
-                 <Link to={`/movies/${movie.id}/${movie.posterURL?genre:''}?`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>
+                 <Link to={`/movies/${movie.id}/${movie.posterURL?genre:'latestshows'}?`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>
                  </button>
                  <button className="add"> + </button>
+                 {/*  */}
+                 { !FindFavMovies(FavMovies,movie.id,genre)? <img src={'./icons/star.svg'} alt='logo' onClick={() => handleClick(movie.id,genre,movie)}/>:<img className="active-star" src={'./icons/activestar.svg'} alt='logo'/>}
+                
                </div>
                <div className="card-description">
                  <p className="category">
@@ -56,8 +66,9 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
                  </p>
                  <p className="title">{movie.description?movie.description:`${movie.title} is a 2019 American musical drama film directed by Jon Favreau, written by Jeff Nathanson, and produced by Walt Disney Pictures...`}</p>
                </div>
-             </div>
-      )}
+             </div>)}
+             
+    
      
       
     </div>
