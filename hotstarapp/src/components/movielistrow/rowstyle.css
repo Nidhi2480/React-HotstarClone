@@ -11,6 +11,7 @@
 .row-contents{
   border-radius: 12px;
   display:flex;
+  justify-content: flex-start;
   flex-wrap: nowrap;
 
   width:100%;

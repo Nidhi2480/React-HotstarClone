@@ -23,7 +23,8 @@ function Nav(){
           setIsHovered(false);
       }, 500); 
   };
-  const handleClickFav=()=>{
+  const handleClickFav=() => {
+
     setFavClicked(!isFavClicked)
   }
 
@@ -42,7 +43,7 @@ function Nav(){
                         <a href="/#" className={`nav-link ${activeNav === nav.name ? 'active' : ''}`} onClick={()=>handleClickFav()}>
                             <img src={nav.icon} alt="profile"  onMouseEnter={() => handleHover(nav.name)} onMouseLeave={handleLeave}/>
                             {isHovered && (
-                                <span className={`nav-text ${activeNav === nav.name ? 'active' : ''}`}>{nav.name==='Favourites'?FavCount:''}{nav.name}</span>
+                                <span className={`nav-text ${activeNav === nav.name ? 'active' : ''}`}>{nav.name==='Favourites'?FavCount :''} {nav.name}</span>
                             )}
                         </a>
                     </li>

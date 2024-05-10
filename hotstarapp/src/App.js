@@ -13,16 +13,37 @@ function App() {
   const [ismovie, setBanner] = useState(MoviesData[0]);
   const [FavCount, setFavCount] = useState(0);
   console.log(FavMovies)
-  const setCount= ()=>{
-    setFavCount(prevCount => prevCount + 1)
-  }
-  const setFavMoviesArray=(id,genre,movie)=>{
-    let Movie={
-      movieid:id,
-      Genre:genre,
-      movie:movie
+  const setCount= (action)=>{
+    switch(action){
+      case "add":
+        setFavCount(prevCount => prevCount + 1);
+      break;
+    case "remove":
+      setFavCount(prevCount => prevCount - 1);
+      break;
+    default:
+      break;
     }
-    setFavMovies((prevFavMovies) => [...prevFavMovies, Movie])
+  }
+  const setFavMoviesArray=(id,genre,movie,action)=>{
+    switch (action){
+      case "add":
+        let Movie={
+          movieid:id,
+          Genre:genre,
+          movie:movie
+        }
+        setFavMovies((prevFavMovies) => [...prevFavMovies, Movie])
+        break;
+      case "remove":
+        setFavMovies((prevFavMovies) => prevFavMovies.filter(item => !(item.movieid === id && item.Genre === genre)));
+        break;
+      default:
+        break;
+
+    }
+
+
   }
 
 

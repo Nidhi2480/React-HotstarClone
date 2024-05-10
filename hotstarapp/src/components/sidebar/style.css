@@ -89,7 +89,7 @@
     position: fixed;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: normal;
     height:80%;
     width:80%;

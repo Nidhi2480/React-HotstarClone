@@ -7,9 +7,11 @@ import FindFavMovies from "./FindFavMovies";
 
 function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
   const [setCount,,setFavMoviesArray,FavMovies]=useContext(Context);
-  const [iscardHovered,setHovered]=useState(true)
+  const [iscardHovered,setHovered]=useState(false)
+  let timeoutId
   const handleMouseEnter = () => {
-    setHovered(true);
+    timeoutId = setTimeout(()=>{setHovered(true);},500)
+    
     if (cardHover){
       cardHover();
     }
@@ -17,15 +19,16 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
   };
 
   const handleMouseLeave = () => {
+    clearTimeout(timeoutId)
     setHovered(false);
     if (NocardHover){
       NocardHover();
     }
   };
 
-  const handleClick=(id,genre,movie)=>{
-    setFavMoviesArray(id,genre,movie)
-    setCount()
+  const handleClick=(id,genre,movie,action)=>{
+      setFavMoviesArray(id,genre,movie,action);
+      setCount(action);
   }
 
   return (
@@ -40,7 +43,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
         <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
       </div>
       <p className="title1">{movie.title}</p>
-      {iscardHovered && (<div className="Activecard">
+      {iscardHovered && (<div className="Activecard" key={movie.id} onMouseLeave={handleMouseLeave}>
              <div className="image">
                <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
     
@@ -55,7 +58,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
                  </button>
                  <button className="add"> + </button>
                  {/*  */}
-                 { !FindFavMovies(FavMovies,movie.id,genre)? <img src={'./icons/star.svg'} alt='logo' onClick={() => handleClick(movie.id,genre,movie)}/>:<img className="active-star" src={'./icons/activestar.svg'} alt='logo'/>}
+                 { !FindFavMovies(FavMovies,movie.id,genre)? <img src={'./icons/star.svg'} alt='logo' onClick={() => handleClick(movie.id,genre,movie,"add")}/>:<img className="active-star" src={'./icons/activestar.svg'} alt='logo'  onClick={() => handleClick(movie.id,genre,movie,"remove")}/>}
                 
                </div>
                <div className="card-description">
