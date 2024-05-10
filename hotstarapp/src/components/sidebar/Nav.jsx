@@ -24,7 +24,6 @@ function Nav(){
       }, 500); 
   };
   const handleClickFav=() => {
-
     setFavClicked(!isFavClicked)
   }
 
@@ -52,16 +51,22 @@ function Nav(){
               
           </ul>
       </div>
-      {isFavClicked &&(<div className="modal">
-        {FavMovies.map((favMovie, _) => (
-         <>
-            <Card
-              movie={favMovie.movie}
-              genre={favMovie.Genre}
-            />
-         </>
-      ))}
-      </div> )}
+                    {/* {isFavClicked &&(*/}
+        <div className={`modal ${isFavClicked?`active`:``} ${isHovered?``:`move-left`}`}>
+            <button onClick={()=>handleClickFav()}>Close</button>
+            <div className="modal-content">
+                    {FavMovies.map((favMovie, _) => (
+                        <>
+                        <Card
+                            movie={favMovie.movie}
+                            genre={favMovie.Genre}
+                        />
+                        </>
+                    ))}
+                </div>
+            </div>
+        
+         {/*)}*/}
       </>
   );
 }

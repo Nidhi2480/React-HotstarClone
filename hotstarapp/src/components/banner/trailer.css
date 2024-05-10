@@ -2,7 +2,8 @@
     width: 100%;
     position: fixed; 
     z-index: 1; 
-    background-color: black;
+    background-color: rgb(26, 24, 24);
+    transition: all .2s linear;
 }
 .movie-trailer video{
     width:100%;

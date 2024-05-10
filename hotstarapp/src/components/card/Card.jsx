@@ -1,17 +1,15 @@
-import React,{useState,useContext} from "react";
-import { Context } from '../../App'
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
-import "./card.css";
+import { Context } from '../../App'
 import FindFavMovies from "./FindFavMovies";
+import "./card.css";
+
 
 
 function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
   const [setCount,,setFavMoviesArray,FavMovies]=useContext(Context);
-  const [iscardHovered,setHovered]=useState(false)
   let timeoutId
   const handleMouseEnter = () => {
-    timeoutId = setTimeout(()=>{setHovered(true);},500)
-    
     if (cardHover){
       cardHover();
     }
@@ -20,7 +18,6 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
 
   const handleMouseLeave = () => {
     clearTimeout(timeoutId)
-    setHovered(false);
     if (NocardHover){
       NocardHover();
     }
@@ -43,7 +40,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
         <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
       </div>
       <p className="title1">{movie.title}</p>
-      {iscardHovered && (<div className="Activecard" key={movie.id} onMouseLeave={handleMouseLeave}>
+      <div className="Activecard" key={movie.id} onMouseLeave={handleMouseLeave}> 
              <div className="image">
                <img src={movie.posterURL?movie.posterURL:movie.poster} alt="test" />
     
@@ -57,7 +54,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
                  <Link to={`/movies/${movie.id}/${movie.posterURL?genre:'latestshows'}?`} style={{ textDecoration: 'none' }}><span className="card-triangle"></span> Watch Now</Link>
                  </button>
                  <button className="add"> + </button>
-                 {/*  */}
+              
                  { !FindFavMovies(FavMovies,movie.id,genre)? <img src={'./icons/star.svg'} alt='logo' onClick={() => handleClick(movie.id,genre,movie,"add")}/>:<img className="active-star" src={'./icons/activestar.svg'} alt='logo'  onClick={() => handleClick(movie.id,genre,movie,"remove")}/>}
                 
                </div>
@@ -69,7 +66,7 @@ function Card({ movie, smallRow,cardHover,NocardHover,genre}) {
                  </p>
                  <p className="title">{movie.description?movie.description:`${movie.title} is a 2019 American musical drama film directed by Jon Favreau, written by Jeff Nathanson, and produced by Walt Disney Pictures...`}</p>
                </div>
-             </div>)}
+             </div>  
              
     
      
