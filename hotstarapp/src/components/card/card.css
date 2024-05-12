@@ -299,11 +299,11 @@ margin-top: 7vh;
 
 @media (max-width:475px){
   .card{
-    width:60vw;
-    height: 20vh;
+    width:70vw;
+    height: 30vh;
   }
   .card .Activecard{
-    height:44vh;
-    width:60vw;
+    height:50vh;
+    width:70vw;
   }
 }
