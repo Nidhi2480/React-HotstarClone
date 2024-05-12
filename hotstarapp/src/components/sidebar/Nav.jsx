@@ -34,7 +34,7 @@ function Nav(){
                   <img className="logo" src={Logo} alt="logo" />
               </li>
               <li>
-                  <button className="button"><p>Subscribe {">"}</p></button>
+                  <button className="button"><p>Subscribe {`>`}</p></button>
               </li>
                 {
                     NavData.map((nav,_)=>(
@@ -53,7 +53,7 @@ function Nav(){
       </div>
                     {/* {isFavClicked &&(*/}
         <div className={`modal ${isFavClicked?`active`:``} ${isHovered?``:`move-left`}`}>
-            <button onClick={()=>handleClickFav()}>Close</button>
+            <button className="btn" onClick={()=>handleClickFav()}>Close</button>
             <div className="modal-content">
                     {FavMovies.map((favMovie, _) => (
                         <>

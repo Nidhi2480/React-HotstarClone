@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   overflow-x:hidden;
+  min-width:600px;
   
 }
 body::-webkit-scrollbar{

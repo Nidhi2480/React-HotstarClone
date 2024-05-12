@@ -40,6 +40,17 @@ function Languagesrow() {
     slidesToScroll: 4,
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {    
+          speed: 1000,
+          slidesToShow: 3,
+          slidesToScroll: 2
+          
+        },
+      }
+    ],
   };
 
   return (

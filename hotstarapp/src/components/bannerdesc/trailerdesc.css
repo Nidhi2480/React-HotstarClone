@@ -1,16 +1,17 @@
 .information {
     position: relative; 
     top: 14vh;
-    left: 9.5%;
+    margin-left: 9.5vw;
     width: 83%;
     background-color:rgb(0, 0, 0,0);
     z-index: 3; 
+    transition: all 1s ease;
 
 }
 
 .information .movieposter{
-    width: 390px;
-    height:180px;
+    width: 20vw;
+    height:22vh;
     object-fit:contain;
 }
 .information .details{
@@ -67,7 +68,7 @@
     border: 1px solid rgba(190, 187, 182, 0.1);
     border-radius: 10px;
     margin-top: 4vh;
-    padding: 2.3vh 11vb;
+    padding: 2.3vh 5vw;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
@@ -81,7 +82,7 @@
     border-radius: 10px;
     margin-left:2vb;
     margin-top: 4vh;
-    padding: 2.3vh 3vb;
+    padding: 2.3vh 3vw;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
@@ -118,11 +119,17 @@
     display: inline-block;
     margin-right:2px;
   }
-  @media screen and (max-width:65rem ) {
+  @media screen and (max-width:1000px ) {
+    .information{
+        margin-left: 12.5vw;
+    }
     .information .description {
         display: none;
     }
     .information .details{
         display: none;
+    }
+    .information .buttons .btn-text{
+        display:none;
     }
 }

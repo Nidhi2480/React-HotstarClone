@@ -19,9 +19,12 @@
   scrollbar-width: none; 
   padding-top:5px;
   padding-bottom:5px;
-
-
-  
+}
+.row-heading{
+  color: white;
+  margin-left: 9.5vw;
+  font-size:20px;
+  font-weight: bold;
 }
 
 .row-contents.x-hide{
@@ -101,4 +104,18 @@
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+
+@media (max-width:800px){
+  .row-contents{
+    flex-direction: column;
+    align-items: center;
+    gap:2rem
+  }
+  .row-heading{
+    margin-left: 6vw;
+    text-align: center;
+    font-size: 30px;
+  }
 }

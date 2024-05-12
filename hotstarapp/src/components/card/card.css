@@ -6,6 +6,7 @@
   margin-right: .8%;
   padding: 0;
   cursor: pointer;
+  min-width:  13vw;
 }
 
 .card .image {
@@ -47,8 +48,8 @@
   top:0;
   transition: all 500ms ease;
   overflow: hidden;
-  height:27vh;
-  width:18vw;
+  height:33vh;
+  width:21vw;
   background-color: rgb(18, 19, 27);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
   border-radius: 7px;
@@ -84,17 +85,9 @@ top:0;
 
 .card.small:hover .Activecard {
 opacity:1;
-height:31vh;
-width:22vw;
 transition: all 500ms linear;
 
 
-
-}
-.card.small:hover .Activecard:hover {
-
-height:34vh;
-width:22vw;
 
 }
 
@@ -289,4 +282,17 @@ margin-top: 7vh;
   border-radius: 50%;
   display: inline-block;
   margin: 4px 4px;
+}
+
+
+
+@media (max-width:800px){
+  .card{
+    width:30vw;
+    height: 44vh;
+  }
+  .card .Activecard{
+    height:44vh;
+    width:30vw;
+  }
 }

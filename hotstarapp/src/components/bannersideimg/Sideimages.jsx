@@ -43,6 +43,17 @@ function Sideimages({ changeBanner }) {
         slidesToScroll: 4,
         prevArrow: <SamplePrevArrow />,
         nextArrow: <SampleNextArrow />,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+            },
+          }
+        ],
     };
     const handleClick = (movie) => {
       changeBanner(movie);
@@ -58,8 +69,10 @@ function Sideimages({ changeBanner }) {
         <div className="images">
             <Slider {...settings}>
                 {MoviesData.map((movie) => (
-                    <div key={movie.id}>
-                        <img
+
+                    <div className='image'>
+                        <img 
+                            key={movie.id}
                             className={`${isHovered && imgname === movie.poster ? 'image-active' : ''}`}
                             src={movie.poster}
                             onClick={() => handleClick(movie)}
@@ -68,6 +81,7 @@ function Sideimages({ changeBanner }) {
                             alt={movie.title}
                         />
                     </div>
+            
                 ))}
             </Slider>
         </div>

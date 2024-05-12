@@ -51,7 +51,7 @@ export default function App({ rowName, apiUrl, smallRow,genre}) {
 
   return (
     <>
-      <h2 style={{ color: 'white', marginLeft: `19vb`, fontSize: `20px`, fontWeight: `bold` }}>{rowName}</h2>
+      <h2 className='row-heading'>{rowName}</h2>
       <div className="row-movies">
         <div className={`row-contents ${changeClass?` x-hide `:``}`}  ref={rowContentRef}>
           {data.slice(startIndex, endIndex + 1).map((movie, _) => (
