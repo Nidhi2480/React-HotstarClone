@@ -36,25 +36,6 @@
   display:none;
 
 }
-/* .row-contentshide-x > * {
-  align-self: flex-start;
-}
-/* /
-.row-movies .row-contents .mov{
-  transition: transform .2s ease;
-  margin-right: 2vb;
-  padding-top:30px;
-  padding-bottom: 30px;
-}
-.row-movies .row-contents .mov img{
-  object-fit: contain;
-  height: 37vh;
-  border-radius: 10px;
-}
-.row-movies .row-contents .mov.active{
-  transform:scale(1.2);
-  z-index: 5;
-} */
 .row-movies .scroll-left {
   position: absolute;
   top:3vh;

@@ -296,3 +296,14 @@ margin-top: 7vh;
     width:30vw;
   }
 }
+
+@media (max-width:475px){
+  .card{
+    width:60vw;
+    height: 20vh;
+  }
+  .card .Activecard{
+    height:44vh;
+    width:60vw;
+  }
+}
