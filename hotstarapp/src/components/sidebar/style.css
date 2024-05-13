@@ -3,7 +3,6 @@
 }
 .nav-bar {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
- 
     position: fixed;
     width: 7%;
     left: 0;
@@ -31,6 +30,18 @@
     margin-left: 3.3vb;
     height: 37px;
     width: 51px;
+}
+.nav-bar .numbers{
+    position: absolute;
+    top:82.5vh;
+    left:3.6vw;
+    width: 2vw; 
+    height:4vh;
+    line-height: 30px; 
+    border-radius: 50%; 
+    text-align: center; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
 }
 
 .nav-bar .nav-link {
@@ -74,7 +85,7 @@
 .nav-text {
     display: inline-block; 
     font-size: 16px; 
-    color: #ffffff; 
+    color: rgba(245, 242, 242, 0.4); 
     margin-left: 5vb; 
     transition: transform 0.3s ease;
 }
@@ -84,68 +95,5 @@
     transform: scale(1.2) translateX(5px);
     font-weight: bold;
 }
-.modal.active{
-    height:80% ;
-    width:80%;
-    opacity: 1;
-    margin-left: 10%;
-    background: linear-gradient(to right,  rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)); 
-    flex-wrap: wrap;
-    justify-content:flex-start;
-    align-items: normal;
-}
-.modal.active.move-left{
-    margin-left: 0;
-    background-color: rgb(0, 0, 0,0.7);
-}
-.modal.active.move-left .modal-content{
-    opacity:1;
-}
-.modal.active.move-left button{
-    left:73.5vw;
-    opacity: 1;
-}
 
-.modal {
-    position: fixed;
-  
-    left:9.5vw;
-    bottom:10vh;
-    height:5vh;
-    width: 5vw;
-   
-    transition: all 800ms ease;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 5%;
-    opacity: 0;
-    background-color:rgba(0, 0, 0, 0.7);
-    z-index: 6;
-}
-.modal .modal-content{
-    display: flex;
-    align-items:self-start;
-    flex-wrap: wrap;
-}
-.modal .modal-content{
-    opacity: 0;
-    transition: all 2s ease;
-}
-.modal .btn{
-    position: relative;
-    left:10vw ;
-    color:rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0,.1);
-    border:1px solid white;
-    border-radius: 5px;
-    padding:2vh 2vw;
-    transition: all .7s ease;
-    opacity: 0;
-}
-.modal .btn:hover{
-    color:rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255,0.3);
-    border:1px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    padding:2vh 2vw;
-}
+

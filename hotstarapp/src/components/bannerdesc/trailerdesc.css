@@ -1,124 +1,137 @@
 .information {
-    position: relative; 
+    position: relative;
     top: 14vh;
     margin-left: 9.5vw;
     width: 83%;
-    background-color:rgb(0, 0, 0,0);
-    z-index: 3; 
+    background-color: rgb(0, 0, 0, 0);
+    z-index: 3;
     transition: all 1s ease;
-
-}
-
-.information .movieposter{
-    width: 20vw;
-    height:22vh;
-    object-fit:contain;
-}
-.information .details{
-    width:60%;
-    min-width: 70%;
-}
-.information .description{
-    width:40%;
-}
-.information .category{
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-}
-.information p{
-    margin-top: 1vh;
-    color:rgb(238, 233, 233);
-    margin-bottom: 2vh;
-   
-}
-.information .description p{
-    margin-top: 3vh;
-    line-height: 1.5;
-    font-weight: normal;
-    color:rgb(238, 233, 233,.8);
-    margin-bottom: 2vh;
-}
-.information .details p{
-    margin-top: 2vh;
-    
-    color:rgba(255, 255, 255, .8);
-    font-weight: bold;
-}
-.information .category p{
-    margin-top: 3vh;
-    color:rgba(255, 255, 255, .8);
-    font-weight: bold;
-}
-.information .details button{
-    border: 1px solid rgba(190, 187, 182, 0.1);
-    border-radius: 4px;
-    margin-top: 1vh;
-    padding: 0.4vh 2vh;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255,0.7);
-}
-.information .row1 .buttons{
-    width:50%;
-}
-.information .row1 .buttons .subscribe{
-    border: 1px solid rgba(190, 187, 182, 0.1);
-    border-radius: 10px;
-    margin-top: 4vh;
-    padding: 2.3vh 5vw;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    transition: all .6s ease;
-    
-}
-.information .row1 .buttons .add{
-    border: 1px solid rgba(190, 187, 182, 0.1);
-    border-radius: 10px;
-    margin-left:2vb;
-    margin-top: 4vh;
-    padding: 2.3vh 3vw;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    transition: all .6s ease;
-}
-.information .row1 .subscribe:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform:scale(1.02)
-}
-.information .row1 .add:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-.information .row1{
-    display:flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-
-.information .details .dot {
-    height: 4px;
-    width: 4px;
-    background-color: rgba(255, 255, 255, .5);
-    border-radius: 50%;
-    display: inline-block;
-    margin:4px 4px;
+  
+    & .movieposter {
+      width: 20vw;
+      height: 22vh;
+      object-fit: contain;
+    }
+  
+    & .details {
+      width: 60%;
+      min-width: 70%;
+  
+      & p {
+        margin-top: 2vh;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+      }
+  
+      & button {
+        border: 1px solid rgba(190, 187, 182, 0.1);
+        border-radius: 4px;
+        margin-top: 1vh;
+        padding: 0.4vh 2vh;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: rgb(255, 255, 255, 0.7);
+      }
+  
+      & .dot {
+        height: 4px;
+        width: 4px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        display: inline-block;
+        margin: 4px 4px;
+      }
+    }
+  
+    & .description {
+      width: 40%;
+  
+      & p {
+        margin-top: 3vh;
+        line-height: 1.5;
+        font-weight: normal;
+        color: rgba(238, 233, 233, 0.8);
+        margin-bottom: 2vh;
+      }
+    }
+  
+    & .category {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  
+      & p {
+        margin-top: 3vh;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+      }
+    }
+  
+    & p {
+      margin-top: 1vh;
+      color: rgb(238, 233, 233);
+      margin-bottom: 2vh;
+    }
+  
+    & .row1 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  
+      & .buttons {
+        width: 50%;
+  
+        & .subscribe {
+          border: 1px solid rgba(190, 187, 182, 0.1);
+          border-radius: 10px;
+          margin-top: 4vh;
+          padding: 2.3vh 5vw;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: rgba(255, 255, 255, 0.2);
+          color: rgb(255, 255, 255);
+          transition: all 0.6s ease;
+  
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+          }
+        }
+  
+        & .add {
+          border: 1px solid rgba(190, 187, 182, 0.1);
+          border-radius: 10px;
+          margin-left: 2vb;
+          margin-top: 4vh;
+          padding: 2.3vh 3vw;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: rgba(255, 255, 255, 0.2);
+          color: rgb(255, 255, 255);
+          transition: all 0.6s ease;
+  
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+          }
+        }
+  
+        & .triangle {
+          border-top: 8px solid transparent;
+          border-left: 16px solid #ffffff;
+          border-bottom: 8px solid transparent;
+          display: inline-block;
+          margin-right: 2px;
+        }
+      }
+    }
   }
-.information .row1 .buttons .triangle {
-    border-top: 8px solid transparent;
-	border-left: 16px solid #ffffff;
-	border-bottom: 8px solid transparent;
-    display: inline-block;
-    margin-right:2px;
-  }
+
+
+
   @media screen and (max-width:1000px ) {
     .information{
         margin-left: 12.5vw;

@@ -4,7 +4,7 @@ import './trailer.css';
 
 function Trailer({ movie, isMuted }) {
   const [showVideo, setShowVideo] = useState(false);
-  const [opacity, setOpacity] = useState(1); // State for opacity
+  const [opacity, setOpacity] = useState(1);
   const videoRef = useRef(null);
 
   useEffect(() => {

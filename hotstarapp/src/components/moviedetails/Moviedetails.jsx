@@ -23,7 +23,6 @@ function Moviedetails({changeBanner,isbanner}){
                         if(selectedMovie){   
                             changeBanner(selectedMovie);
                         }
-                     
                     }
                     
                 } else {
@@ -46,7 +45,7 @@ function Moviedetails({changeBanner,isbanner}){
         <div className="shadow"></div>
         <div className="rows" >
       
-        <Row rowName="Movies Like This" apiUrl={`https://api.sampleapis.com/movies/${genre==='latestshows'?'drama':genre}`} smallRow={false}  changeBanner={changeBanner} genre={genre}/>
+        <Row rowName="Movies Like This" apiUrl={`https://api.sampleapis.com/movies/${genre==='latestshows'?'drama':genre}`} smallRow={false} genre={`${genre==='latestshows'?'drama':genre}`}/>
         </div>
     </div>
     )

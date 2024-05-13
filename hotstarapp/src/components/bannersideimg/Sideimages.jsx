@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MoviesData from '../../moviedata/Moviesdata';
+import {SamplePrevArrow,SampleNextArrow} from '../scrollbuttons/ScrollButtons'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,31 +9,7 @@ import "./sideimages.css";
 function Sideimages({ changeBanner }) {
     const [isHovered, setHovered] = useState(false);
     const [imgname, setImage] = useState(null);
-    const SamplePrevArrow = (props) => {
-      const { onClick } = props;
-      return (
-        <button
-          className={`side-scroll-left`}
-        
-          onClick={onClick}
-        >
-          <i className="arrow left" />
-        </button>
-      );
-    };
-  
-    const SampleNextArrow = (props) => {
-      const { onClick } = props;
-      return (
-        <button
-          className={`side-scroll-right`}
-  
-          onClick={onClick}
-        >
-          <i className="arrow right" />
-        </button>
-      );
-    };
+    
   
 
     const settings = {
@@ -41,8 +18,8 @@ function Sideimages({ changeBanner }) {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
-        prevArrow: <SamplePrevArrow />,
-        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow classname='side-scroll-left'/>,
+        nextArrow: <SampleNextArrow classname='side-scroll-right'/>,
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [

@@ -1,36 +1,13 @@
 import React from 'react';
 import Languages from '../../moviedata/Languagedata';
+import { SamplePrevArrow,SampleNextArrow } from '../scrollbuttons/ScrollButtons'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './languagesrow.css';
 
 function Languagesrow() {
-  const SamplePrevArrow = (props) => {
-    const { onClick } = props;
-    return (
-      <button
-        className={`scroll-left`}
-      
-        onClick={onClick}
-      >
-        <i className="arrow left" />
-      </button>
-    );
-  };
 
-  const SampleNextArrow = (props) => {
-    const { onClick } = props;
-    return (
-      <button
-        className={`scroll-right`}
-
-        onClick={onClick}
-      >
-        <i className="arrow right" />
-      </button>
-    );
-  };
 
   const settings = {
     dots: false,
@@ -38,8 +15,8 @@ function Languagesrow() {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 4,
-    prevArrow: <SamplePrevArrow />,
-    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow classname='side-scroll-left row'/>,
+    nextArrow: <SampleNextArrow classname='side-scroll-right row'/>,
     responsive: [
       {
         breakpoint: 1200,

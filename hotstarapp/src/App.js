@@ -25,6 +25,7 @@ function App() {
       break;
     }
   }
+ 
   const setFavMoviesArray=(id,genre,movie,action)=>{
     switch (action){
       case "add":
@@ -34,6 +35,7 @@ function App() {
           movie:movie
         }
         setFavMovies((prevFavMovies) => [...prevFavMovies, Movie])
+    
         break;
       case "remove":
         setFavMovies((prevFavMovies) => prevFavMovies.filter(item => !(item.movieid === id && item.Genre === genre)));

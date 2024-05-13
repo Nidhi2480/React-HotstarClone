@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../card/Card';
-import MoviesData from '../../moviedata/Moviesdata';
+import { SampleNextArrow,SamplePrevArrow } from '../scrollbuttons/ScrollButtons'
 import './rowstyle.css';
 
-export default function App({ rowName, apiUrl, smallRow,genre}) {
+export default function App({ rowName, apiUrl,MoviesData, fav,smallRow,genre}) {
   const [data, setData] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(6); 
@@ -33,7 +33,7 @@ export default function App({ rowName, apiUrl, smallRow,genre}) {
       }
     };
     getData();
-  }, [apiUrl]);
+  }, [apiUrl,MoviesData]);
 
   const handleScrollRight = () => {
     if (endIndex < data.length - 1) {
@@ -52,7 +52,7 @@ export default function App({ rowName, apiUrl, smallRow,genre}) {
   return (
     <>
       <h2 className='row-heading'>{rowName}</h2>
-      <div className="row-movies">
+      <div className={`row-movies ${fav?'fav':''}`}>
         <div className={`row-contents ${changeClass?` x-hide `:``}`}  ref={rowContentRef}>
           {data.slice(startIndex, endIndex + 1).map((movie, _) => (
             <Card
@@ -61,17 +61,14 @@ export default function App({ rowName, apiUrl, smallRow,genre}) {
               cardHover={cardHover}
               NocardHover={NocardHover}
               genre={genre}
+              fav={fav}
             />
           ))}
         </div>
         {isNavHovered && (
           <>
-            <button className="scroll-right" id="scrollRight" onClick={handleScrollRight}>
-              <i className="arrow right" />
-            </button>
-            <button className="scroll-left" id="scrollLeft" onClick={handleScrollLeft}>
-              <i className="arrow left" />
-            </button>
+              <SamplePrevArrow classname={`side-scroll-left movie-row`}  onClick={handleScrollLeft}/>
+              <SampleNextArrow classname={`side-scroll-right movie-row`} onClick={handleScrollRight} />
           </>
         )}
       </div>

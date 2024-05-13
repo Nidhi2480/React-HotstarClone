@@ -1,288 +1,277 @@
 .card {
-  height:35vh;
+  height: 35vh;
   width: 13vw;
   transition: all 0.4s ease;
   color: rgb(247, 247, 247);
-  margin-right: .8%;
+  margin-right: 0.8%;
   padding: 0;
   cursor: pointer;
-  min-width:  13vw;
-}
-
-.card .image {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-
-}
-
-.card .image img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-}
-.card .title1{
-  display:none;
- 
-}
+  min-width: 13vw;
 
 
-.card.small {
-  height:26vh;
-  width:18vw;
-  flex-shrink: 0;
-}
-.card.small .title1{
-  text-align: center;
-  display:block;
-  height:20%;
-}
-.card.small .image{
-  height:75%;
+  & .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 
-}
-.card.small .Activecard {
-  opacity:0;
-  position: absolute;
-  top:0;
-  transition: all 500ms ease;
-  overflow: hidden;
-  height:33vh;
-  width:21vw;
-  background-color: rgb(18, 19, 27);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
-  border-radius: 7px;
-
-
-}
-.card.small .Activecard .image{
-  position: relative;
-  width:100%;
-  height:70%;
-  border-radius: 13px;
-
-}
-.card.small .Activecard .logo{
-display: none;
-}
-.card.small .Activecard .card-buttons{
-display: none;
-}
-.card.small .Activecard  .card-description{
-height:30%;
-}
-
-.card.small .Activecard .card-description .category{
-position: relative;
-top:0;
-}
-.card.small .Activecard .card-description .title{
-position: relative;
-top:0;
-}
-
-
-.card.small:hover .Activecard {
-opacity:1;
-transition: all 500ms linear;
-
-
-
-}
-
-.card .Activecard {
-opacity: 0;
-position: absolute;
-top: 0;
-height: 42vh;
-width: 18vw;
-overflow: hidden;
-background-color: rgb(18, 19, 27);
-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75),
-10px 0 20px -5px rgba(0, 0, 0, 0.75);
-border-radius: 10px;
-z-index: 2;
-pointer-events: none;
-transition: all .2s linear;
-
-}
-
-.card:hover {
-  transform: scale(1.05);
-  z-index: 1;
-}
-.card:hover .Activecard {
-  opacity: 1;
-  pointer-events:all;
-  z-index: 5;
-  transform: translateY(-7px);
-  transition: all 200ms linear;
-
-}
-.card:hover .Activecard:hover {
-
-  transform: scale(1.2) translateY(-1rem);
-}
-
-.card .Activecard .image{
-  width:100%;
-  position: absolute;
-  z-index: -1;
-  height:50%;
-  border-radius: 13px;
-
-}
-
-
-.card .Activecard .image video{
-width:100%;
-border-radius: 13px;
-
-}
-
-.card .Activecard .card-description{
-
-  display:block;
-  height: 10vh;
-
-}
-.card .Activecard .logo{
-position: relative;
-top:9vh;
-left:0;
-display:flex;
-width:100%;
-height:8vh;
-}
-.card .Activecard .logo img{
-height:100%;
-width:50%;
-}
-.card .Activecard .card-buttons{
-  position: relative;
-  top:3vh;
-  background:linear-gradient(to top, rgb(18, 19, 27),rgb(18, 19, 27,0.9),
- 
-  rgb(18, 19, 27,.3),
-  rgb(18, 19, 27,.1));
-  display:flex;
-  height: 11vh;
-  img{
-    margin-left: .5vw;
-    width:1.5vw;
-    transition: transform 500ms ease;
+    & img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+    }
   }
-  img:hover{
-    transform: scale(1.2) translateY(-0.2rem);
+
+  & .title1 {
+    display: none;
   }
-  img:active{
-    transform: translateX(-0.2rem);
 
+  &.small {
+    height: 26vh;
+    width: 18vw;
+    flex-shrink: 0;
+
+    & .title1 {
+      text-align: center;
+      display: block;
+      height: 20%;
+    }
+
+    & .image {
+      height: 75%;
+    }
+
+    & .Activecard {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: all 500ms ease;
+      overflow: hidden;
+      height: 33vh;
+      width: 21vw;
+      background-color: rgb(20, 19, 19);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+      border-radius: 7px;
+      & .image {
+        position: relative;
+        width: 100%;
+        height: 70%;
+        border-radius: 13px;
+      }
+
+      & .logo {
+        display: none;
+      }
+
+      & .card-buttons {
+        display: none;
+      }
+
+      & .card-description {
+        height: 30%;
+
+        & .category {
+          text-decoration: none;
+          position: relative;
+          top: 0;
+        }
+
+        & .title {
+          position: relative;
+          top: 0;
+        }
+      }
+    }
+
+    &:hover .Activecard {
+      opacity: 1;
+      transition: all 500ms linear;
+    }
+  }
+
+  & .Activecard {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 42vh;
+    width: 18vw;
+    overflow: hidden;
+    background-color:  rgb(21, 21, 24);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75), 10px 0 20px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.2s linear;
+
+    & .image {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      height: 50%;
+      border-radius: 13px;
+
+      & video {
+        width: 100%;
+        border-radius: 13px;
+      }
+
+      & img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+    }
+
+    & .card-description {
+      display: block;
+      height: 10vh;
+
+      & .category {
+        color: white;
+        position: relative;
+        text-decoration: none;
+        top: 5vh;
+        font-size: 11px;
+      }
+
+      & .title {
+        position: relative;
+        top: 6vh;
+        font-size: 11px;
+        color: rgb(148, 148, 178);
+      }
+    }
+
+    & .logo {
+      position: relative;
+      top: 9vh;
+      left: 0;
+      display: flex;
+      width: 100%;
+      height: 8vh;
+
+      & img {
+        height: 100%;
+        width: 50%;
+      }
+    }
+
+    & .card-buttons {
+      position: relative;
+      top: 3vh;
+      background: linear-gradient(
+        to top,
+        rgb(18, 19, 27),
+        rgba(18, 19, 27, 0.9),
+        rgba(18, 19, 27, 0.3),
+        rgba(18, 19, 27, 0.1)
+      );
+      display: flex;
+      height: 11vh;
+
+      & img {
+        margin-left: 0.5vw;
+        width: 1.5vw;
+        transition: transform 500ms ease;
+
+        &:hover {
+          transform: scale(1.2) translateY(-0.2rem);
+        }
+
+        &:active {
+          transform: translateX(-0.2rem);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 1;
+
+    & .Activecard {
+      opacity: 1;
+      pointer-events: all;
+      z-index: 5;
+      transform: translateY(-7px);
+      transition: all 200ms linear;
+
+      &:hover {
+        transform: scale(1.2) translateY(-1rem);
+      }
+    }
+  }
+
+  & .card-buttons {
+    & .watch-now {
+      margin-top: 7vh;
+      margin-left: 0.5vw;
+      height: 50%;
+      border: 1px solid rgba(190, 187, 182, 0.1);
+      border-radius: 7px;
+      padding: 1.4vh 7%;
+      cursor: pointer;
+      width: 60%;
+      font-size: 12px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    & img {
+      margin-top: 7vh;
+      width: 20%;
+      height: 38%;
+    }
+
+    & .add {
+      margin-top: 7vh;
+      border: 1px solid rgba(190, 187, 182, 0.1);
+      border-radius: 10px;
+      padding: 0.9vh 7%;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 20px;
+      width: 20%;
+      height: 50%;
+      background-color: rgba(54, 51, 51, 0.5);
+      color: rgb(255, 255, 255);
+      transition: all 0.2s ease;
+      margin-left: 0.5vw;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    & .card-triangle {
+      border-top: 4px solid transparent;
+      border-left: 8px solid #000000;
+      border-bottom: 4px solid transparent;
+      display: inline-block;
+      margin-right: 2px;
+    }
+  }
+
+  & .card-description {
+    & .dot {
+      height: 4px;
+      width: 4px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      display: inline-block;
+      margin: 4px 4px;
+    }
   }
 }
 
-.card .Activecard .image  img{
-  height:100%;
-  object-fit:cover;
-  width: 100%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
 
-}
-
-.card .Activecard .card-description .category{
-  position: relative;
-  top:5vh;
-  font-size: 11px;
-}
-.card .Activecard .card-description .title{
-position: relative;
-top:6vh;
-  font-size: 11px;
-  color: rgb(148, 148, 178);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card .card-buttons .watch-now {
-margin-top: 7vh;
-  margin-left: .5vw;
-  height:50%;
-  border: 1px solid rgba(190, 187, 182, 0.1);
-  border-radius: 7px;
-  padding: 1.4vh 7%; 
-  cursor: pointer;
-  width:60%;
-  font-size: 12px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  transition: transform .2s ease;
-}
-
-.card .card-buttons .watch-now:hover {
-  transform:scale(1.03)
-}
-.card .card-buttons img{
-margin-top: 7vh;
-width:20%;
-height:38%;
-}
-
-.card .card-buttons .add {
-margin-top: 7vh;
-  border: 1px solid rgba(190, 187, 182, 0.1);
-  border-radius: 10px;
-  padding:  .9vh 7%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 20px;
-  width:20%;
-  height:50%;
-  background-color: rgba(54, 51, 51, 0.5);
-  color: rgb(255, 255, 255);
-  transition: all .2s ease;
-  margin-left: .5vw;
-}
-
-.card .card-buttons .add:hover {
-  transform:scale(1.03)
-}
-
-.card .card-buttons .card-triangle {
-  border-top: 4px solid transparent;
-  border-left: 8px solid #000000;
-  border-bottom: 4px solid transparent;
-  display: inline-block;
-  margin-right: 2px;
-}
-
-.card .card-description .dot {
-  height: 4px;
-  width: 4px;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 50%;
-  display: inline-block;
-  margin: 4px 4px;
-}
 
 
 

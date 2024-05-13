@@ -6,7 +6,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1.5fr 0.5fr 0.5fr 2.5fr;
     grid-row-gap: 10px;
-    background-color: rgb(18, 19, 27);
+    background-color:  rgb(17, 17, 19);
     height: 50vh;
     width: 100%;
     z-index: 1;

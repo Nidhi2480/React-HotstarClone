@@ -18,7 +18,7 @@ function TrailerDesc({changebanner,movie,handleUnmuteClick,isMuted}) {
     </div>
     <div className="category">
         <p>Adventure | Action | Sci-FI | Fantasy</p>
-        {isMuted?<img src='icons/volumeup.svg' alt="volume"  onClick={handleClick} />:<img src={unMute} alt="volume"  onClick={handleClick} />}
+        {isMuted?<img src='/icons/volumeup.svg' alt="volume"  onClick={handleClick} />:<img src={unMute} alt="volume"  onClick={handleClick} />}
     </div>
     <div className="row1">
 
