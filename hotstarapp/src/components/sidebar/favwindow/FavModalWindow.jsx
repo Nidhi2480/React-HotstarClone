@@ -27,7 +27,7 @@ function FavModalWindow({ isFavClicked,isHovered,handleClickFav,FavMovies}) {
     <div className={`modal ${isFavClicked?`active`:``} ${isHovered?``:`move-left`}`}>
     <h1>Your Favourites</h1><button className="btn" onClick={()=>handleClickFav()}>Close</button>
     <div className="modal-content">
-    {FavMovies.length === 0 && (<h2>Empty</h2>)}
+    {FavMovies.length === 0 && (<h3>Empty</h3>)}
     {isFavClicked && FavMovies.slice(startIndex,endIndex).map((favMovie, index) => (
                 <Card
                     key={index}

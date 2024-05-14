@@ -21,9 +21,9 @@
 }
 .modal.active.move-left .modal-content{
     opacity:1;
-    h2{
+    h3{
         opacity: 1;
-        color: rgb(30, 30, 37);
+        color: white;
     }
 }
 .modal.active.move-left .btn{
@@ -34,6 +34,7 @@
     h1{
         left:28.5vw;
         opacity:1;
+        color: white;
     }
   
 }
@@ -67,7 +68,7 @@
     align-items:self-start;
     flex-wrap: wrap;
     position: relative;
-    h2{
+    h3{
         margin-left:24.5vw;
         color: white;
         opacity: 0;
