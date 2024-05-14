@@ -4,19 +4,19 @@ import Card from '../../card/Card';
 import './modal.css'
 function FavModalWindow({ isFavClicked,isHovered,handleClickFav,FavMovies}) {
   const [startIndex, setStartIndex] = useState(0);
-  const [endIndex, setEndIndex] = useState(4);
+  const [endIndex, setEndIndex] = useState(5);
 
   const handleScrollRight = () => {
     if (endIndex <= FavMovies.length - 1) {
-      setStartIndex(startIndex + 1);
-      setEndIndex(endIndex + 1);
+      setStartIndex(startIndex + 5);
+      setEndIndex(endIndex + 5);
     }
   };
 
   const handleScrollLeft = () => {
     if (startIndex >= 1) {
-      setStartIndex(startIndex - 1);
-      setEndIndex(endIndex - 1);
+      setStartIndex(startIndex - 5);
+      setEndIndex(endIndex - 5);
     }
   };
   
