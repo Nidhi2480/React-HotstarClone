@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
-import Row from "../movielistrow/Row"
+import Details from "./Details";
 import MoviesData from '../../moviedata/Moviesdata';
 import Header from '../header/Header'
 import './details.css'
@@ -45,7 +45,7 @@ function Moviedetails({changeBanner,isbanner}){
         <div className="shadow"></div>
         <div className="rows" >
       
-        <Row rowName="Movies Like This" apiUrl={`https://api.sampleapis.com/movies/${genre==='latestshows'?'drama':genre}`} smallRow={false} genre={`${genre==='latestshows'?'drama':genre}`}/>
+        <Details genre={genre}/>
         </div>
     </div>
     )

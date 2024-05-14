@@ -85,7 +85,7 @@
 .nav-text {
     display: inline-block; 
     font-size: 16px; 
-    color: rgba(245, 242, 242, 0.4); 
+    color: rgba(255, 255, 255,0.7); 
     margin-left: 5vb; 
     transition: transform 0.3s ease;
 }
@@ -94,6 +94,15 @@
     display: inline-block;
     transform: scale(1.2) translateX(5px);
     font-weight: bold;
+    color:white;
 }
 
+@media only screen and (max-width:800px){
+    .nav-bar{
+        .numbers{
+            top:93.5vh;
+            left: 5.5vw;
+        }
+    }
+}
 

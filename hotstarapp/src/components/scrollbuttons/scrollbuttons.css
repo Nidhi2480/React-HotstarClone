@@ -20,6 +20,10 @@
     }
     &.movie-row{
       height:78%;
+      &.fav{
+        top:15vh;
+        height:30vh;
+      }
     }
   }
   .side-scroll-left{
@@ -43,6 +47,10 @@
     }
     &.movie-row{
       height:78%;
+      &.fav{
+        top:15vh;
+        height:30vh;
+      }
     }
   }
 

@@ -19,6 +19,8 @@ import aiwbanner from  '../media//movierowdata/aiw.webp'
 import loganlogo from '../media//movierowdata/loganlogo.webp'
 import logantrailer from  '../media//movierowdata/logan.webm'
 import loganbanner from  '../media//movierowdata/logan.webp'
+
+
 const MoviesData = [
     {
       id:1,
@@ -57,7 +59,7 @@ const MoviesData = [
           languages: "4 languages",
           ua:"U/A 7+"},
         poster: poster3,
-        description: "The Lion King is a 2019 American musical drama film directed by Jon Favreau, written by Jeff Nathanson, and produced by Walt Disney Pictures and Fairview Entertainment",
+        description: "The Lion King is a 2019 American musical drama film directed by Jon Favreau, written by Jeff Nathanson, and produced by Walt Disney Pictures and Fairview ..",
       },
       {
         id:4,
@@ -96,7 +98,7 @@ const MoviesData = [
           languages: "4 languages",
           ua:"U/A 13+"},
         poster:    aiwbanner ,
-        description: "Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney...",
+        description: "Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt...",
       },
       {
         id:7,
@@ -104,7 +106,7 @@ const MoviesData = [
         logo:loganlogo
     
         ,
-        trailerLink:     logantrailer  ,
+        trailerLink: logantrailer  ,
         genre: {
           year:"2017",
           length:"2h 17m" ,

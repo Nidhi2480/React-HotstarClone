@@ -14,8 +14,7 @@
     }
   
     & .details {
-      width: 60%;
-      min-width: 70%;
+      width: 70%;
   
       & p {
         margin-top: 2vh;
@@ -132,7 +131,7 @@
 
 
 
-  @media screen and (max-width:1000px ) {
+  @media only screen and (max-width:1000px ) {
     .information{
         margin-left: 12.5vw;
     }

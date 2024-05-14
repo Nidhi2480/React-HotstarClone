@@ -20,8 +20,6 @@ function Sideimages({ changeBanner }) {
         slidesToScroll: 4,
         prevArrow: <SamplePrevArrow classname='side-scroll-left'/>,
         nextArrow: <SampleNextArrow classname='side-scroll-right'/>,
-        autoplay: true,
-        autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1200,

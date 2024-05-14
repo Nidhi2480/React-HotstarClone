@@ -17,7 +17,7 @@ function Content({ changeBanner, isbanner }) {
 
             const { top } = target.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-            setIsShow(top - windowHeight + 300 <= 0);
+            setIsShow(top - windowHeight + 100 <= 0);
         };
 
         window.addEventListener("scroll", scrollHandler);

@@ -4,9 +4,10 @@ import Card from '../../card/Card';
 import './modal.css'
 function FavModalWindow({ isFavClicked,isHovered,handleClickFav,FavMovies}) {
   const [startIndex, setStartIndex] = useState(0);
-  const [endIndex, setEndIndex] = useState(3); 
+  const [endIndex, setEndIndex] = useState(4);
+
   const handleScrollRight = () => {
-    if (endIndex < FavMovies.length - 1) {
+    if (endIndex <= FavMovies.length - 1) {
       setStartIndex(startIndex + 1);
       setEndIndex(endIndex + 1);
     }
@@ -24,8 +25,9 @@ function FavModalWindow({ isFavClicked,isHovered,handleClickFav,FavMovies}) {
 
 
     <div className={`modal ${isFavClicked?`active`:``} ${isHovered?``:`move-left`}`}>
-    <button className="btn" onClick={()=>handleClickFav()}>Close</button>
+    <h1>Your Favourites</h1><button className="btn" onClick={()=>handleClickFav()}>Close</button>
     <div className="modal-content">
+    {FavMovies.length === 0 && (<h2>Empty</h2>)}
     {isFavClicked && FavMovies.slice(startIndex,endIndex).map((favMovie, index) => (
                 <Card
                     key={index}
@@ -36,8 +38,8 @@ function FavModalWindow({ isFavClicked,isHovered,handleClickFav,FavMovies}) {
                 
       
         </div>
-        <SamplePrevArrow classname='side-scroll-left movie-row'  onClick={handleScrollLeft}/>
-        <SampleNextArrow classname='side-scroll-right movie-row' onClick={handleScrollRight}/>
+        <SamplePrevArrow classname='side-scroll-left movie-row fav'  onClick={handleScrollLeft}/>
+        <SampleNextArrow classname='side-scroll-right movie-row fav' onClick={handleScrollRight}/>
     
     </div>
   )

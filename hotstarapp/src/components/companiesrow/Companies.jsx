@@ -4,7 +4,7 @@ import './companies.css'
 function Companies() {
   return (
     <div className="companies-row">
-        {ProductionHouses.map((house,index)=>(
+        {ProductionHouses.map((house,_)=>(
                     <div className='item'>
                     <img src={house.pimg} alt="companies"/>
                     <video autoPlay muted loop>

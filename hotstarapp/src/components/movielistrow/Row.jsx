@@ -7,7 +7,7 @@ export default function App({ rowName, apiUrl,MoviesData, fav,smallRow,genre}) {
   const [data, setData] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(6); 
-  const [isNavHovered, setNavHovered] = useState(true);
+  const [isNavHovered, setNavHovered] = useState(false);
   const [changeClass, setChangeClass] = useState(false);
   const rowContentRef = useRef(null);
   function cardHover(){
@@ -16,7 +16,7 @@ export default function App({ rowName, apiUrl,MoviesData, fav,smallRow,genre}) {
   }
   function NocardHover(){
     setChangeClass(false)
-    setNavHovered(true)
+
   }
   useEffect(() => {
     const getData = async () => {
@@ -52,7 +52,7 @@ export default function App({ rowName, apiUrl,MoviesData, fav,smallRow,genre}) {
   return (
     <>
       <h2 className='row-heading'>{rowName}</h2>
-      <div className={`row-movies ${fav?'fav':''}`}>
+      <div className={`row-movies ${fav?'fav':''}`} onMouseEnter={()=> setNavHovered(true)} onMouseLeave={()=> setNavHovered(false)}>
         <div className={`row-contents ${changeClass?` x-hide `:``}`}  ref={rowContentRef}>
           {data.slice(startIndex, endIndex + 1).map((movie, _) => (
             <Card

@@ -7,7 +7,7 @@
   padding-bottom:40px;
   z-index: inherit;
   &.fav{
-    margin-left:4vw;
+    margin-left:7vw;
   }
 
 }
@@ -39,57 +39,6 @@
   display:none;
 
 }
-.row-movies .scroll-left {
-  position: absolute;
-  top:3vh;
-  left:0;
-  width:2vw;
-  background: linear-gradient(to right,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
-  color: rgb(255, 255, 255);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  height:80%;
-  width: 7%;
-  z-index: 3;
-  display: block;
-  transition: all .2s ease;
-  
-}
-.row-movies .scroll-right {
-  top:3vh;
-  position: absolute;
-  right:0;
-  background: linear-gradient(to left,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0));
-  color: rgb(255, 255, 255);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  height:80%;
-  display: block;
-  width: 7%;
-  z-index: 4;
-  transition: all .2s ease;
-}
-.arrow {
-  border: solid rgb(255, 255, 255);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
 
 @media (max-width:800px){
   .row-contents{

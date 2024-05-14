@@ -21,10 +21,21 @@
 }
 .modal.active.move-left .modal-content{
     opacity:1;
+    h2{
+        opacity: 1;
+        color: rgb(30, 30, 37);
+    }
 }
 .modal.active.move-left .btn{
     left:73.5vw;
     opacity: 1;
+}
+.modal.active.move-left{
+    h1{
+        left:28.5vw;
+        opacity:1;
+    }
+  
 }
 
 .modal {
@@ -42,12 +53,25 @@
     opacity: 0;
     background-color:rgba(0, 0, 0, 0.7);
     z-index: 6;
+    h1{
+        color:white;
+        position: relative;
+        left:10vw ;
+        transition: all 500ms ease;
+        opacity: 0;
+    }
 }
 .modal .modal-content{
+    margin-left: 10vw;
     display: flex;
     align-items:self-start;
     flex-wrap: wrap;
     position: relative;
+    h2{
+        margin-left:24.5vw;
+        color: white;
+        opacity: 0;
+    }
 }
 .modal .modal-content{
     opacity: 0;

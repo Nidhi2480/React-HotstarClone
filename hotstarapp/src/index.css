@@ -3,7 +3,7 @@ body {
   font-family: Avenir-Roman, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: rgb(12, 10, 10);
   overflow-x:hidden;
   min-width:600px;
   

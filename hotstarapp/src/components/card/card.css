@@ -34,7 +34,8 @@
     & .title1 {
       text-align: center;
       display: block;
-      height: 20%;
+      margin-top: 1rem;
+      font-size: 20px;
     }
 
     & .image {
@@ -65,15 +66,20 @@
 
       & .card-buttons {
         display: none;
+        & img{
+          display: block;
+        }
       }
 
       & .card-description {
         height: 30%;
+        
 
         & .category {
           text-decoration: none;
           position: relative;
           top: 0;
+          
         }
 
         & .title {
@@ -127,9 +133,10 @@
     & .card-description {
       display: block;
       height: 10vh;
-
+      margin-top: 1rem;
+      margin-left: .5rem;
       & .category {
-        color: white;
+        color: rgb(245, 245, 245);
         position: relative;
         text-decoration: none;
         top: 5vh;
@@ -218,7 +225,9 @@
       background-color: rgb(255, 255, 255);
       color: rgb(0, 0, 0);
       transition: transform 0.2s ease;
-
+      & .btn-text{
+        color: black;
+      }
       &:hover {
         transform: scale(1.03);
       }
@@ -275,24 +284,38 @@
 
 
 
-@media (max-width:800px){
+@media only screen and (max-width:800px){
   .card{
     width:30vw;
     height: 44vh;
+    &.small{
+      width:30vw;
+      height: 44vh;
+      & .Activecard{
+        height:44vh;
+        width:30vw;
+      }
+    }
+    & .Activecard{
+      height:44vh;
+      width:30vw;
+    }
   }
-  .card .Activecard{
-    height:44vh;
-    width:30vw;
-  }
+
 }
 
-@media (max-width:475px){
+@media only screen and (max-width:475px){
   .card{
     width:70vw;
     height: 30vh;
+    &.small{
+      width:70vw;
+      height: 30vh;
+    }
+    &.Activecard{
+      height:50vh;
+      width:70vw;
+    }
   }
-  .card .Activecard{
-    height:50vh;
-    width:70vw;
-  }
+  
 }
