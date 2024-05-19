@@ -1,7 +1,8 @@
 import React from 'react'
 import Sideimages from '../bannersideimg/Sideimages';
-import { DefaultMov } from '../../moviedata/Default';
-import unMute from '../../media/icons/unmute.svg';
+import { DefaultMov } from '../../data/Default';
+import Mute from '../../assets/icons/mute.svg';
+import unMute from '../../assets/icons/volumeup.svg';
 import './trailerdesc.css';
 function TrailerDesc({changebanner,movie,handleUnmuteClick,isMuted}) {
     function handleClick(){
@@ -18,7 +19,7 @@ function TrailerDesc({changebanner,movie,handleUnmuteClick,isMuted}) {
     </div>
     <div className="category">
         <p>{DefaultMov.category}</p>
-        {isMuted?<img src='/icons/volumeup.svg' alt="volume"  onClick={handleClick} />:<img src={unMute} alt="volume"  onClick={handleClick} />}
+        {isMuted?<img src={unMute} alt="volume"  onClick={handleClick} />:<img src={Mute} alt="volume"  onClick={handleClick} />}
     </div>
     <div className="row1">
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Banner } from '../../moviedata/Moviesdata';
+import { Banner } from '../../data/Moviesdata';
 import './trailer.css';
 
 function Trailer({ movie, isMuted }) {

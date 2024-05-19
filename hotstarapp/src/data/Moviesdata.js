@@ -1,25 +1,24 @@
-import starwarslogo from "../media/starwars.webp"
-import blackpantherlogo from "../media/blackpantherlogo.webp"
-import lionkinglogo from "../media/lionkinglogo.webp"
-import mblogo from "../media/mblogo.webp"
-import poster1 from "../media/starwarsbanner.webp"
-import poster2 from "../media/bp.webp"
-import poster3 from "../media/lion.webp"
-import mbposter from "../media/mb.webp"
-import starwarstrailer from "../media/starwars.mp4"
-import blackpanthertrailer from "../media/Marvel Studios' Black Panther - Official Trailer.mp4"
-import lionkingtrailer from "../media/The Lion King Official Trailer.mp4"
-import mbtrailer from "../media/mbtrailer.mp4"
-import calogo from '../media//movierowdata/cawslogo.webp'
-import catrailer from  '../media//movierowdata/caws.mp4'
-import cabanner from  '../media//movierowdata/caws.webp'
-import aiwlogo from '../media//movierowdata/aiwlogo.webp'
-import aiwtrailer from  '../media//movierowdata/aiw.mp4'
-import aiwbanner from  '../media//movierowdata/aiw.webp'
-import loganlogo from '../media//movierowdata/loganlogo.webp'
-import logantrailer from  '../media//movierowdata/logan.webm'
-import loganbanner from  '../media//movierowdata/logan.webp'
-
+import starwarslogo from "../assets/movierowdata/starwars.webp"
+import blackpantherlogo from "../assets/movierowdata/blackpantherlogo.webp"
+import lionkinglogo from "../assets/movierowdata/lionkinglogo.webp"
+import mblogo from "../assets/movierowdata/mblogo.webp"
+import poster1 from "../assets/movierowdata/starwarsbanner.webp"
+import poster2 from "../assets/movierowdata/bp.webp"
+import poster3 from "../assets/movierowdata/lion.webp"
+import mbposter from "../assets/movierowdata/mb.webp"
+import starwarstrailer from "../assets/movierowdata/starwars.mp4"
+import blackpanthertrailer from "../assets/movierowdata/Marvel Studios' Black Panther - Official Trailer.mp4"
+import lionkingtrailer from "../assets/movierowdata/The Lion King Official Trailer.mp4"
+import mbtrailer from "../assets/movierowdata/mbtrailer.mp4"
+import calogo from '../assets/movierowdata/cawslogo.webp'
+import catrailer from  '../assets/movierowdata/caws.mp4'
+import cabanner from  '../assets/movierowdata/caws.webp'
+import aiwlogo from '../assets/movierowdata/aiwlogo.webp'
+import aiwtrailer from  '../assets/movierowdata/aiw.mp4'
+import aiwbanner from  '../assets/movierowdata/aiw.webp'
+import loganlogo from '../assets/movierowdata/loganlogo.webp'
+import logantrailer from  '../assets/movierowdata/logan.webm'
+import loganbanner from  '../assets/movierowdata/logan.webp'
 
 const MoviesData = [
     {
@@ -125,7 +124,7 @@ const MoviesData = [
 
 export const Banner={
   poster:"/default.jpg",
-  video:"/videos/compilation.mp4"
+  video:"/compilation.mp4"
 } 
 
 

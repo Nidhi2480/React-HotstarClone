@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductionHouses from './Housesdata'
+import ProductionHouses from '../../data/Housesdata'
 import './companies.css'
 function Companies() {
   return (

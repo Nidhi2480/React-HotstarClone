@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../card/Card';
 import { SampleNextArrow,SamplePrevArrow } from '../scrollbuttons/ScrollButtons'
+import { FetchMovies } from '../../data/api/Fetchmovies';
 import './rowstyle.css';
 
 export default function App({ rowName, apiUrl,MoviesData, fav,smallRow,genre}) {
@@ -19,21 +20,19 @@ export default function App({ rowName, apiUrl,MoviesData, fav,smallRow,genre}) {
 
   }
   useEffect(() => {
-    const getData = async () => {
-      try {
-        if (apiUrl) {
-          const resp = await fetch(apiUrl);
-          const json = await resp.json();
-          setData(json);
-        } else {
-          setData(MoviesData);
-        }
-      } catch (error) {
+    const getData = async() => {
+      try{
+        const data=await FetchMovies(apiUrl)
+        console.log(data)
+        setData(data);
+      }
+      catch(error){
         console.error('Error fetching movie data:', error);
       }
     };
     getData();
-  }, [apiUrl,MoviesData]);
+  }, [apiUrl]);
+
 
   const handleScrollRight = () => {
     if (endIndex < data.length - 1) {

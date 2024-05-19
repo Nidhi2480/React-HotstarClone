@@ -1,5 +1,5 @@
 import React from 'react';
-import Languages from '../../moviedata/Languagedata';
+import Languages from '../../data/Languagedata';
 import { SamplePrevArrow,SampleNextArrow } from '../scrollbuttons/ScrollButtons'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';

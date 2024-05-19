@@ -2,7 +2,7 @@ import React, { useState ,useCallback} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/sidebar/Nav';
 import Content from './components/contents/Content';
-import MoviesData from './moviedata/Moviesdata';
+import MoviesData from './data/Moviesdata';
 import Footer from "./components/footer/Footer";
 import Moviedetails from './components/moviedetails/Moviedetails';
 import './App.css';
@@ -35,7 +35,6 @@ function App() {
           movie:movie
         }
         setFavMovies((prevFavMovies) => [...prevFavMovies, Movie])
-    
         break;
       case "remove":
         setFavMovies((prevFavMovies) => prevFavMovies.filter(item => !(item.movieid === id && item.Genre === genre)));

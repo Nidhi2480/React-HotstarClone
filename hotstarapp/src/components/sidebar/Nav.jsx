@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Context } from '../../App';
-import NavData from "./Navdata";
-import Logo from '../../media/icons/logo-d-plus.svg';
+import NavData from "../../data/Navdata";
+import Logo from '../../assets/icons/logo-d-plus.svg';
 import FavModalWindow from "./favwindow/FavModalWindow";
 import './style.css';
 

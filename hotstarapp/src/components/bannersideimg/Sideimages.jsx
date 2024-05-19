@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MoviesData from '../../moviedata/Moviesdata';
+import MoviesData from '../../data/Moviesdata';
 import {SamplePrevArrow,SampleNextArrow} from '../scrollbuttons/ScrollButtons'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';

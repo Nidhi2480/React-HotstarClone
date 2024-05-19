@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
+import { FetchMovie } from "../../data/api/Fetchmovies";
 import Details from "./Details";
-import MoviesData from '../../moviedata/Moviesdata';
 import Header from '../header/Header'
 import './details.css'
 function Moviedetails({changeBanner,isbanner}){
@@ -13,26 +13,12 @@ function Moviedetails({changeBanner,isbanner}){
     useEffect(() => {
         const fetchMovie = async () => {
             try {
-                const response = await fetch(`https://api.sampleapis.com/movies/${genre}/${id}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.posterURL){
-                        changeBanner(data);
-                    }else{
-                        const selectedMovie = MoviesData.find(movie => movie.id === parseInt(id));
-                        if(selectedMovie){   
-                            changeBanner(selectedMovie);
-                        }
-                    }
-                    
-                } else {
-                    throw new Error('Failed to fetch movie');
-                }
+                const Moviedata = await FetchMovie(genre,id);
+                changeBanner(Moviedata)
             } catch (error) {
                 console.error('Error fetching movie:', error);
             }
         };
-
         if (id) {
             fetchMovie();
         }

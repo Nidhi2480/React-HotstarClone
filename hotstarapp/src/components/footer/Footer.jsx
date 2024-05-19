@@ -1,9 +1,9 @@
 import React from 'react';
 import FooterItem from './FooterItem';
-import twitter from '../../media/icons/twitter.svg';
-import fb from '../../media/icons/fb.svg';
-import googleplay from '../../media/icons/google-playstore.webp';
-import appstore from '../../media/icons/ios-appstore.webp';
+import twitter from '../../assets/icons/twitter.svg';
+import fb from '../../assets/icons/fb.svg';
+import googleplay from '../../assets/icons/google-playstore.webp';
+import appstore from '../../assets/icons/ios-appstore.webp';
 import './footer.css';
 
 function Footer() {
